@@ -300,4 +300,8 @@ color: blue;
         width: 100%;
         margin:  0;
     }
+    .services {
+        text-align: center;
+        padding: 0px;
+    }
 }

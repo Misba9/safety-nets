@@ -14,14 +14,22 @@
         crossorigin="anonymous"></script>
 
 </head>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+</script>
 <body>
     <!-- navbar start -->
     <nav class="navbar">
         <div class="left-nav ">
             <img width="90px" height="70px" src="images/logo-rem.png" alt="Eastern Motors">
         </div>
-        <div class="right-nav">
+        <!-- <div class="right-nav">
             <ul>
                 <li><a class="nav-btn" href="index.php">Home</a></li>
                 <li><a class="nav-btn" href="about.php">About</a></li>
@@ -33,7 +41,7 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
               </div>
-        </div>
+        </div> -->
     </nav>
     <!-- navbar end -->
     <!-- hero section start -->
