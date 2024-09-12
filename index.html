@@ -6,47 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RJR - Safety Nets </title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/logo05c.png">
     <script src="https://kit.fontawesome.com/11ebebdeee.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
+        crossorigin="anonymous"></script> -->
 </head>
 <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
+// navbar toggle
+function toggleMenu() {
+    const menu = document.getElementById('nav-links-id');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+}
+// navbar end 
 </script>
 
 <body>
     <!-- navbar start -->
     <nav class="navbar">
-        <div class="left-nav ">
-            <img width="90px" height="70px" src="images/logo03.png" alt="Eastern Motors">
+        <div class="left-nav " width="90px" height="70px">
+            <img width="90px" height="70px" src="images/logo05c.png" alt="Eastern Motors">
         </div>
-        <!-- <div class="right-nav">
-            <ul>
-                <li><a class="nav-btn" href="index.php">Home</a></li>
-                <li><a class="nav-btn" href="about.php">About</a></li>
-                <li><a class="nav-btn" href="about.php">Services</a></li>
-                <li><a class="nav-btn" href="contact.php">Contact</a></li>
+        <div class="right-nav">
+            <ul class="nav-links" id="nav-links-id">
+                <li><a class="nav-btn active" href="#">Home</a></li>
+                <li><a class="nav-btn" href="#">About</a></li>
+                <li><a class="nav-btn" href="#">Services</a></li>
+                <li><a class="nav-btn" href="#">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div>
-        </div> -->
+        </div>
+        <a class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars bars" ></i>
+        </a>
     </nav>
     <!-- navbar end -->
     <!-- hero section start -->
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
                 <img width="250px" height="600px" src="images/cricket-nets.jpg" class="d-block w-100" alt="...">
@@ -69,10 +70,47 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div> -->
+
+
+    
+<!-- <div class="slideshow-container">
+
+    <div class="mySlides fade" style="width: 100%;">
+      <div class="numbertext">1 / 3</div>
+      <img width="250px" height="600px" src="images/cricket-nets.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
     </div>
+    
+    <div class="mySlides fade" style="width: 100%;">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/Construction Safety Nets.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade" style="width: 100%;">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/anri-bird-net.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div> -->
+    
+    
     <!-- hero section start -->
     <!-- main box start -->
     <div class="main-boxes">
+        <!-- <h2>Why Do Clients Trust Us Over Others?</h2> -->
         <div class="box-1">
             <img class="box-1-img" height="80px" width="60px" src="images/quality-rem.png" alt="">
             <h3 class="box-1-title">Quality</h3>
@@ -94,6 +132,46 @@
     <div class="services">
         <h1>Our Services</h1>
         <div class="services-container">
+            <div class="services-box">
+                <div class="services-img-box">
+                    <a href="">
+                        <img class="services-img" height="180px" width="260px" src="images/children-safety-net.jpg"
+                            alt="logo" class="card-img" /></a>
+                </div>
+                <h3 class="services-title">Children's Safety Nets</h3>
+                <p class="services-text">
+                    A children's safety net is a holistic system of support and protection aimed at ensuring the safety,
+                    well-being and development of children.
+                </p>
+                <a href="" class="">Learn More</a>
+            </div>
+            <div class="services-box">
+                <div class="services-img-box">
+                    <a href="">
+                        <img class="services-img" height="180px" width="260px" src="images/balcony.jpg" alt=""
+                            class="card-img" /></a>
+                </div>
+                <h3 class="services-title">Balcony Safety Nets</h3>
+                <p class="services-text">
+                    Balcony safety net is used to prevent unwanted situation in buildings.. Where unexpected falling
+                    from balcony leads people life risky.. It makes people tension free, never feel fear to stay in high
+                    building
+                </p>
+                <a href="" class="">Learn More</a>
+            </div>
+            <div class="services-box">
+                <div class="services-img-box">
+                    <a href="">
+                        <img class="services-img" height="180px" width="260px" src="images/childern-nets.jpg" alt=""
+                            class="card-img" /></a>
+                </div>
+                <h3 class="services-title">Children's Safety Nets</h3>
+                <p class="services-text">
+                    A children's safety net is a holistic system of support and protection aimed at ensuring the safety,
+                    well-being and development of children.
+                </p>
+                <a href="" class="">Learn More</a>
+            </div>
             <div class="services-box">
                 <div class="services-img-box">
                     <a href="">
@@ -165,7 +243,7 @@
 
     <!-- services end -->
     <!-- contact form start -->
-    <section class="contact-c" id="contact">
+    <!-- <section class="contact-c" id="contact">
         <h2 class="text-center-c">Contact Us</h2>
         <div class="full-form">
             <div class="left-form">
@@ -215,19 +293,20 @@
                 <button class="btn btn-dark">Submit</button>
             </div>
         </div><br>
-    </section>
+    </section> -->
     <!-- contact form end-->
 
     <!-- footer start -->
     <footer>
         <div class="top-container">
             <div class="footer-container-1">
-                <img height="150px" src="images/logo03.png" alt="Eastern Motors">
+                <img height="150px" src="images/logo05c.png" alt="Eastern Motors">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati architecto optio quod.</p>
             </div>
             <div class="footer-container-2">
                 <h3 class="footer-title">Address</h3>
-                <li class="text-line"><i class="fa-solid fa-location-dot"></i> Address: Muneshwara Swamy Layout, Ejipura, Bengaluru, Karnataka 560095</li>
+                <li class="text-line"><i class="fa-solid fa-location-dot"></i> Address: Muneshwara Swamy Layout,
+                    Ejipura, Bengaluru, Karnataka 560095</li>
                 <ul>
                     <li class="text-line">
                         <a href="tel:+917075051812"><i class="fa-solid fa-phone"></i> +91 70 7505 1812 </a>
