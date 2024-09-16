@@ -1,195 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo page</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="script/main.js"></script>
+    <link rel="icon" href="images/rjr safety nets final logo-b.png">
 </head>
-
 <body>
-
-    <!-- navbar starts -->
-    <nav class="navbar">
-        <div class="left-nav " width="90px" height="70px">
-            <img width="90px" height="70px" src="images/logo05c.png" alt="Eastern Motors">
-            <h1></h1>
-        </div>
-        <div class="right-nav">
+     <!-- navbar start -->
+     <nav class="navbar">
+         <div class="left-nav " width="90px" height="70px">
+             <img width="90px" height="70px" src="images/rjr safety nets final logo-b.png" alt="Eastern Motors">
+             <h1></h1>
+            </div>
+            <div class="right-nav">
             <ul class="nav-links" id="nav-links-id">
-                <li><a class="nav-btn active" href="#">Home</a></li>
+
+                <li><a class="nav-btn " href="#">Home</a></li>
                 <li><a class="nav-btn" href="#">About</a></li>
-                <li><a class="nav-btn" href="#">Services</a></li>
-                <li><a class="nav-btn" href="#">Contact</a></li>
+                <li class="dropdown">
+                    <a class="nav-btn dropbtn" href="pages.html">Services</a>
+                    <div class="dropdown-content">
+                        <a href="#">Product 1</a>
+                        <a href="#">Product 2</a>
+                        <a href="#">Product 3</a>
+                    </div>
+                </li>
+                <li><a class="nav-btn" href="#contact">Contact</a></li>
             </ul>
         </div>
         <a class="hamburger" onclick="toggleMenu()">
             <i class="fa-solid fa-bars bars"></i>
         </a>
     </nav>
-    <!-- navbar ends -->
-
-    <!-- About Start -->
-    <section id="about">
-        <div class="container-xxl">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="h-100">
-                            <h1 class="m-0 pb-2 pt-0 display-5 text-uppercase fw-bold" id="logo">
-                                Penetration Testing
-                            </h1>
-                            <p>
-                                At RAVAN CYBER SOLUTIONS, we believe that the Penetration testing, often referred to as
-                                pen testing, is a comprehensive security assessment process designed to simulate
-                                real-world cyberattacks. The primary objective is to identify vulnerabilities within an
-                                organization's network, applications, and systems before malicious hackers can exploit
-                                them. In essence, penetration testing helps organizations assess their security posture,
-                                strengthen defenses, and ensure compliance with industry standards and regulations.
-                            </p>
-                            <p>
-                                The Importance of Penetration Testing Services<br>
-                                Proactive Vulnerability Discovery:<br>
-                                Penetration testing proactively identifies security weaknesses in your digital
-                                infrastructure, allowing you to address them before cybercriminals can exploit them.
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row g-3">
-                            <div class="col-6 text-end">
-                                <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.1s"
-                                    src="img/prntesting1.jpeg" style="margin-top: 25%" />
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid w-100 wow zoomIn" data-wow-delay="0.3s"
-                                    src="img/pentesting.jpeg" />
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid w-50 wow zoomIn" data-wow-delay="0.5s"
-                                    src="img/pen3.png" />
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.7s"
-                                    src="img/pentesting9.jpeg" />
-                            </div>
-                        </div>
-                    </div>
+    <!-- navbar end -->
+        <!-- footer start -->
+        <footer>
+            <div class="top-container">
+                <div class="footer-container-1">
+                    <img height="150px" src="images/rjr safety nets final logo-b.png" alt="Eastern Motors">
+                    <p class="text-line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati architecto optio
+                        quod.</p>
+                </div>
+                <div class="footer-container-2">
+                    <h3 class="footer-title">Address</h3>
+                    <li class="text-line"><i class="fa-solid fa-location-dot"></i> Address: Muneshwara Swamy Layout,
+                        Ejipura, Bengaluru, Karnataka 560095</li>
+                    <ul>
+                        <li class="text-line">
+                            <a href="tel:+917075051812"><i class="fa-solid fa-phone"></i> +91 70 7505 1812 </a>
+                        </li>
+                        <li class="text-line">
+                            <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><i
+                                    class="fa-brands fa-whatsapp"></i> +91 80 7451 4411</a>
+                        </li>
+                        <li class="text-line">
+                            <a href="mailto:ahmedmisba405@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                rjrsafetynets@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-container-3">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li class="text-line"><a href="index">Home</a></li>
+                        <li class="text-line"><a href="about">About</a></li>
+                        <li class="text-line"><a href="services">Services</a></li>
+                        <li class="text-line"><a href="contact">Contact</a></li>
+    
+                    </ul>
+                </div>
+                <div class="footer-container-4">
+                    <h3 class="footer-title">Products & Services</h3>
+                    <ul>
+                        <li class="text-line"><a href="index">Trail</a></li>
+                        <li class="text-line"><a href="about">Bulers</a></li>
+                        <li class="text-line"><a href="services">Conners</a></li>
+                        <li class="text-line"><a href="contact">Services</a></li>
+                    </ul>
                 </div>
             </div>
+            <div class="bottom-container">© 2024 RJR - Safety Nets. All Rights Reserved </div>
+        </footer>
+        <div id="call" class="call">
+            <a href="tel:+917075051812"><img width="60px" height="60px" src="images/call-btn-rem.png" alt="" ></a>
         </div>
-        <div class="container-xxl g-4 align-items-center pb-5">
-            <p>
-                Enhanced Security Awareness:
-                By experiencing simulated cyberattacks, your team gains invaluable insights into potential threats and
-                vulnerabilities, fostering a culture of security awareness within your organization.
-            </p>
-            <p>
-                Protecting Your Reputation:
-                Data breaches can tarnish a company's reputation. Penetration testing helps protect your brand's
-                integrity by preventing breaches in the first place.
-
-            </p>
-            <p>
-                The Penetration Testing Process
-                Planning:                Define the scope, goals, and objectives of the penetration test, considering the critical assets and
-                potential threats.
-            </p>
-            <p>
-                Information Gathering:
-                Gather information about the target systems and applications to understand their vulnerabilities better.
-
-            </p>
-            <p>
-                Threat Modeling: Create a threat model to simulate potential attack scenarios, ensuring a comprehensive
-                assessment.
-            </p>
-            <p>
-                Vulnerability Analysis: Identify vulnerabilities in the target systems, applications, and network configurations.
-            </p>
-            <p>
-                Exploitation: Attempt to exploit the identified vulnerabilities, replicating the tactics used by malicious hackers.
-            </p>
-            <p>
-                Reporting: Provide a detailed report outlining the vulnerabilities discovered, their severity, and recommendations for remediation.
-            </p>
-            <p>
-                Remediation: Work with your IT team to address and patch the identified vulnerabilities.
-            </p>
-        </div>
-    </section>
-    <!-- About End -->
-
-    <!-- footer starts -->
-    <footer id="footer" class="pt-5 pb-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center pb-3">
-                    <a href="index.html" class="navbar-brand">
-                        <img class="pb-3 py-1 footer-img" src="img/logo-.png" alt="" width="50" />
-                        <h1 class=" m-0 pb-0 pt-0 display-5 text-uppercase fw-bold footer-text" id="logo">
-                            RAVAN CYBER SOLUTIONS
-                        </h1>
-                        <!-- <p>
-              SECURE YOUR FUTURE IN DIGITAL WORLD
-            </p> -->
-                    </a>
-                </div>
-
-                <div class="col-md-4 text-center align-middle">
-                    <i class="bi bi-telephone fs-4 align-middle"></i>
-                    +91 86393 66015
-                </div>
-                <div class="col-md-4 text-center align-middle">
-                    <i class="bi bi-envelope fs-4 align-middle"></i>
-                    ravancybersolutions@gmail.com
-                </div>
-                <div class="col-md-4 text-center align-middle ">
-                    <!-- <i class="bi bi-geo-alt fs-4 align-middle "></i> -->
-                    <a class="a" href="https://github.com/Misba9" target="_blank">
-                        <i class="fa-brands fa-brands-2X fa-github fs-4 social-icon"></i>
-                    </a>
-                    <a class="a" href="https://instagram.com/ravan_cybrz?igshid=MzRlODBiNWFlZA==" target="_blank"">
-            <i class=" fa-brands fa-brands-2X fa-instagram fs-4 social-icon"></i>
-                    </a>
-                    <a class="a" href="https://www.linkedin.com/in/ravan-cyber-712885280/" target="_blank">
-                        <i class="fa-brands fa-brands-2X fa-linkedin fs-4 social-icon"></i>
-                    </a>
-                    <!-- <a class="a" href="https://www.youtube.com/" target="_blank">
-            <i  class="fa-brands fa-brands-2X fa-telegram fs-4 social-icon"></i>
-          </a> -->
-
-                </div>
-            </div>
-        </div>
-        <hr />
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p class="copy">Copyright Text. All rights reserved.</p>
-                </div>
-            </div>
-            <p class="top">
-                <a href="#home"><i class="bi bi-arrow-up-square-fill"></i></a>
-            </p>
-        </div>
-    </footer>
-    <!-- footer ends -->
-
-    <!-- whatsapp starts -->
-    <div class="container">
         <div id="whatsapp">
-            <a href="https://wa.me/918639366015?text=Hi%20There!" class="float" target="_blank">
-                <img src="https://trickuweb.com/whatsapp.png" alt="" height="70px" width="70px" />
-            </a>
+            <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><img width="60px" height="60px" src="images/whatsapp-btn-rem.png" alt=""></a>
         </div>
-    </div>
-    <!-- whatsapp ends -->
-
-    <script src="js/main.js"></script>
-
+        <!-- footer end -->
 </body>
-
 </html>

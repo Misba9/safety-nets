@@ -1,34 +1,4 @@
-
 // navbar toggle start
-//     function toggleMenu() {
-//     const menu = document.getElementById('nav-links-id');
-//     const hamburger = document.getElementById('hamburger');
-
-//     // Toggle menu visibility
-//     if (menu.style.display === 'block') {
-//         menu.style.display = 'none';
-//     } else {
-//         menu.style.display = 'block';
-//     }
-
-//     // Toggle active class on the hamburger button
-//     hamburger.classList.toggle('active');
-
-//     // Click outside to close menu
-//     document.addEventListener('click', function(event) {
-//         const isClickInside = menu.contains(event.target) || hamburger.contains(event.target);
-
-//         if (!isClickInside) {
-//             menu.style.display = 'none';
-//             hamburger.classList.remove('active'); // Remove active class when clicking outside
-//         }
-//     });
-// }
-
-
-
-
-
 // Variable to keep track of the click event listener
 let outsideClickListenerAdded = false;
 
@@ -117,7 +87,7 @@ function showSlides() {
     slideIndex++;
 
     // Automatically change slide every 2 seconds
-    slideTimer = setTimeout(showSlides, 2000);
+    slideTimer = setTimeout(showSlides, 5500);
 }
 
 // Function to navigate manually (next/prev)
