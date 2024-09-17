@@ -117,3 +117,5 @@ function currentSlide(n) {
 window.onload = function () {
     showSlides();  // Start the slideshow on page load
 };
+
+
