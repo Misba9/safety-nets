@@ -118,4 +118,3 @@ window.onload = function () {
     showSlides();  // Start the slideshow on page load
 };
 
-

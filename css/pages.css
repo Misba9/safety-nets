@@ -332,11 +332,11 @@ li a {
 .footer-container-2,
 .footer-container-3,
 .footer-container-4 {
-    width: 20%;
+    width: 25%;
     color: rgb(0, 0, 0);
     flex-wrap: wrap;
     flex: 1;
-    min-width: 200px;
+    min-width: 250px;
     text-align: left;
     padding: 10px;
     gap: 15px;
