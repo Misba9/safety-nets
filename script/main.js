@@ -44,12 +44,6 @@ function handleOutsideClick(event) {
     }
 }
 
-
-
-
-
-
-
 // navbar end 
 
 
@@ -86,8 +80,8 @@ function showSlides() {
     // Increment slideIndex to move to the next slide on the next automatic cycle
     slideIndex++;
 
-    // Automatically change slide every 2 seconds
-    slideTimer = setTimeout(showSlides, 5500);
+    // Automatically change slide every 3 seconds
+    slideTimer = setTimeout(showSlides, 3000);
 }
 
 // Function to navigate manually (next/prev)
