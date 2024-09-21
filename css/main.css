@@ -405,7 +405,7 @@ li a {
 
 .link-rm {
     text-decoration: none;
-    color: #4235f1;
+    color: #4212ef;
 }
 
 .link-rm:hover {
@@ -495,13 +495,10 @@ li a {
     text-align: center;
     background-color: white;
 }
-
-
-
 .top-container {
     background-color: #44CFCB;
     color: white;
-    /* padding: 20px 70px; */
+    padding: 20px 70px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     /* flex-wrap: wrap; */
@@ -520,8 +517,16 @@ li a {
     border-bottom: 1px solid #d1d1d150;
     text-align: left;
     padding: 8px;
+    color: #6439FF;
 }
-
+.text-line-a{
+    font-weight: 700;
+    text-decoration: none;
+    color: #6439FF;
+}
+.text-line-a:hover{
+    color: #8690ff;
+}
 .footer-container-1,
 .footer-container-2,
 .footer-container-3,
@@ -735,6 +740,7 @@ li a {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        padding: 0;
     }
     .parent-boxes {
         display: flex;
