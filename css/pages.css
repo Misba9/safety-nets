@@ -650,6 +650,12 @@ li a {
         height: 320px;
         object-fit: cover;
     }
+    .carousel {
+        /* ... */
+        &:hover .slide-image {
+          animation-play-state: paused;
+        }
+      }
 
     /* slider end */
 

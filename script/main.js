@@ -112,3 +112,18 @@ window.onload = function () {
     showSlides();  // Start the slideshow on page load
 };
 
+
+// btn slider image 
+
+const button = document.getElementById('myButton');
+
+// Add hover event listener for dynamic text change
+button.addEventListener('mouseover', () => {
+    button.textContent = 'Hovered!';
+});
+
+button.addEventListener('mouseout', () => {
+    button.textContent = 'Hover Me';
+});
+// 
+// 
