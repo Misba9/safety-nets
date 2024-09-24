@@ -11,68 +11,102 @@
 </head>
 
 <body>
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
 
-    <style>
- .carousel {
-    margin: 0 auto;
-    padding: 20px 0;
-    max-width: 700px;
-    overflow: hidden;
-    display: flex;
-    > * {
-      flex: 0 0 100%;
-    }
-    &:hover .group {
-      animation-play-state: paused;
-    }
-  }
-  @keyframes scrolling {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  .group {
-    display: flex;
-    gap: 20px;
-    padding-right: 20px;
-    will-change: transform; 
-    animation: scrolling 10s linear infinite;
-  }
+    <!-- <style>
+        .carousel {
+            margin: 0 auto;
+            padding: 20px 0;
+            max-width: 1200px;
+            overflow: hidden;
+            display: flex;
 
-  .card {
-    width: 100%;
-    color: white;
-    padding: 5px;
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px;
+            >* {
+                flex: 0 0 100%;
+            }
 
-    /* &:nth-child(1) {
-      background: #7958ff;
-    }
+            &:hover .group {
+                animation-play-state: paused;
+            }
+        }
 
-    &:nth-child(2) {
-      background: #5d34f2;
-    }
+        @keyframes scrolling {
+            0% {
+                transform: translateX(0);
+            }
 
-    &:nth-child(3) {
-      background: #4300da;
-    } */
-  }
-  .card-slide-img{
-    border-radius: 24px;
-    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
-  }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
 
-   </style>
+        .group {
+            display: flex;
+            gap: 20px;
+            padding-right: 20px;
+            will-change: transform;
+            animation: scrolling 10s linear infinite;
+        }
+
+        .card {
+            width: 100%;
+            color: white;
+            padding: 5px;
+            font-size: xx-large;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+
+        .card-slide-img {
+            border-radius: 24px;
+            box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+        }
+        .bubble{
+            width:400px;
+            height: auto;
+        }  
+        </style> -->
     <div class="carousel">
+        <div class="group">
+            <div class="bubble">
+                <blockquote>The Balcony Safety Net installation was flawless! It provides complete peace of mind for my family, especially with kids around. It blends well with the design of the balcony, and the quality is top-notch! </blockquote>
+                <div></div>
+                <cite> John D.</cite>
+            </div>
+            <div class="bubble">
+                <blockquote>I’m so happy with the Balcony Safety Net! We live on the 8th floor, and it’s a relief knowing that our pets are safe now. The installation was quick, and the team was extremely professional. </blockquote>
+                <div></div>
+                <cite> Sarah K.</cite>
+            </div>
+            <div class="bubble">
+                <blockquote>The Building Safety Net was a lifesaver for our construction site. It prevented several accidents during ongoing work. Highly durable, and the installation team was very efficient.</blockquote>
+                <div></div>
+                <cite>Rajesh P.</cite>
+            </div>
+        </div>
+        <!-- Add `aria-hidden` to hide the duplicated cards from screen readers. -->
+        <div aria-hidden class="group">
+            <div class="bubble">
+                <blockquote>As a building manager, safety is my top priority, and these Building Safety Nets exceeded my expectations. They’re sturdy and give me confidence that our workers are protected at all times. </blockquote>
+                <div></div>
+                <cite> Megha R.</cite>
+            </div>
+            <div class="bubble">
+                <blockquote>The Monkey Safety Net has saved our home from daily visits by monkeys! It’s a simple but effective solution, and we haven’t had a single issue since the installation. </blockquote>
+                <div></div>
+                <cite> Arjun S</cite>
+            </div>
+            <div class="bubble">
+                <blockquote>We installed the Monkey Safety Net on our terrace, and it works like a charm. We can now enjoy our outdoor space without worrying about monkeys. Absolutely worth it!</blockquote>
+                <div></div>
+                <cite>Priya M.</cite>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="carousel">
         <div class="group">
             <div class="card">
                 <img class="card-slide-img" height="200px" width="300px" src="images/Construction Safety Nets.jpg" alt="">
@@ -84,7 +118,6 @@
                 <img class="card-slide-img" height="200px" width="300px" src="images/brids-safty-nets.jpeg" alt="">
             </div>
           </div>
-          <!-- Add `aria-hidden` to hide the duplicated cards from screen readers. -->
           <div aria-hidden class="group">
             <div class="card">
                 <img class="card-slide-img" height="200px" width="300px" src="images/anti-bird-safety-nets.jpg" alt="">
@@ -96,12 +129,12 @@
                 <img class="card-slide-img" height="200px" width="300px" src="images/balcony-03.jpg" alt="">
             </div>
           </div>
-    </div>
+    </div> -->
 
-<br><br>
-<br><br>
-<br><br>
-<br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
 
     <div class="counters-container">
         <div class="counter-box" data-target="5000">
@@ -121,197 +154,213 @@
             <p>Our Team</p>
         </div>
     </div>
-<style>
-    .counters-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 0;
-}
+    <style>
+        .counters-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
 
-.counter-box {
-    text-align: center;
-    padding: 20px;
-}
+        .counter-box {
+            text-align: center;
+            padding: 20px;
+        }
 
-.counter-box h2 {
-    font-size: 40px;
-    color: #333;
-}
+        .counter-box h2 {
+            font-size: 40px;
+            color: #333;
+        }
 
-.counter-box p {
-    font-size: 20px;
-    color: #666;
-}
-
-</style> 
+        .counter-box p {
+            font-size: 20px;
+            color: #666;
+        }
+    </style>
     <script>
-    const counters = document.querySelectorAll('.counter');
-    const speed = 200; // Adjust the speed of the counting here
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // Adjust the speed of the counting here
 
-    counters.forEach(counter => {
-        const updateCounter = () => {
-            const target = +counter.parentElement.getAttribute('data-target'); // Get the target number
-            const count = +counter.innerText.replace('+', ''); // Get the current number
+        counters.forEach(counter => {
+            const updateCounter = () => {
+                const target = +counter.parentElement.getAttribute('data-target'); // Get the target number
+                const count = +counter.innerText.replace('+', ''); // Get the current number
 
-            // Calculate increment value
-            const increment = target / speed;
+                // Calculate increment value
+                const increment = target / speed;
 
-            if (count < target) {
-                // Increment the counter
-                counter.innerText = `${Math.ceil(count + increment)}+`;
-                setTimeout(updateCounter, 20); // Repeat every 20ms
-            } else {
-                counter.innerText = `${target}+`; // Set the final value
-            }
+                if (count < target) {
+                    // Increment the counter
+                    counter.innerText = `${Math.ceil(count + increment)}+`;
+                    setTimeout(updateCounter, 20); // Repeat every 20ms
+                } else {
+                    counter.innerText = `${target}+`; // Set the final value
+                }
+            };
+
+            // Start updating the counter
+            updateCounter();
+        });
+    </script>
+
+
+
+
+    <section class="quotes">
+        <div class="bubble">
+            <blockquote>I refuse to accept the view that mankind is so tragically bound to the starless midnight of
+                racism and war that the bright daybreak of peace and brotherhood can never become a reality... I believe
+                that unarmed truth and unconditional love will have the final word.
+            </blockquote>
+            <div></div>
+            <cite> Martin Luther King, Jr.</cite>
+        </div>
+        <div class="bubble">
+            <blockquote> Peace is not a relationship of nations. It is a condition of mind brought about by a serenity
+                of soul. Peace is not merely the absence of war. It is also a state of mind. Lasting peace can come only
+                to peaceful people.
+            </blockquote>
+            <div></div>
+            <cite> Jawaharlal Nehru</cite>
+        </div>
+        <div class="bubble">
+            <blockquote> Forgiveness is not always easy. At times, it feels more painful than the wound we suffered, to
+                forgive the one that inflicted it. And yet, there is no peace without forgiveness.
+            </blockquote>
+            <div></div>
+            <cite> Marianne Williamson</cite>
+        </div>
+        <div class="bubble">
+            <blockquote>Of all our dreams today there is none more important - or so hard to realise - than that of
+                peace in the world. May we never lose our faith in it or our resolve to do everything that can be done
+                to convert it one day into reality. </blockquote>
+            <div></div>
+            <cite> Lester B. Pearson</cite>
+        </div>
+    </section>
+    <style>
+        body {
+            background-color: #00B4CC;
+        }
+
+        /* Bubble Slider */
+
+        .bubble blockquote {
+            margin: 10px 10px 0;
+            background: #fff;
+            padding: 60px;
+            position: relative;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.25em;
+            color: #1e528e;
+        }
+
+        .bubble blockquote:before,
+        .bubble blockquote:after {
+            content: "\201C";
+            position: absolute;
+            font-size: 80px;
+            padding: 10px;
+            line-height: 1;
+            color: #1e528e;
+        }
+
+        .bubble blockquote:before {
+            top: 0;
+            left: 10px;
+        }
+
+        .bubble blockquote:after {
+            content: "\201D";
+            right: 10px;
+            bottom: -.5em;
+        }
+
+        .bubble div {
+            width: 0;
+            height: 0;
+            border-left: 0 solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #fff;
+            margin: 0 0 0 60px;
+            margin-bottom: 10px;
+        }
+
+        .bubble cite {
+            padding-left: 20px;
+            font-size: 1.25em;
+            color: #f7f7f7;
+        }
+
+
+
+
+        section {
+            width: 60%;
+            margin: 70px auto;
+
+        }
+    </style>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.bubble');
+        let timer;
+
+        // Show slide with sliding animation
+        const showSlide = (index, direction) => {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active', 'slide-in-left', 'slide-in-right', 'slide-out-left', 'slide-out-right');
+                if (i === index) {
+                    slide.classList.add(direction === 'next' ? 'slide-in-right' : 'slide-in-left', 'active');
+                } else {
+                    slide.classList.add(direction === 'next' ? 'slide-out-left' : 'slide-out-right');
+                }
+            });
         };
 
-        // Start updating the counter
-        updateCounter();
-    });
-</script>
+        // Show the next slide
+        const nextSlide = () => {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex, 'next');
+        };
 
+        // Show the previous slide
+        const prevSlide = () => {
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            showSlide(slideIndex, 'prev');
+        };
 
+        // Start automatic slide
+        const startAutoSlide = () => {
+            timer = setInterval(nextSlide, 2000); // Auto-slide every 2 seconds
+        };
 
+        // Stop automatic slide
+        const stopAutoSlide = () => {
+            clearInterval(timer);
+        };
 
-<section class="quotes">
-    <div class="bubble">
-      <blockquote>I refuse to accept the view that mankind is so tragically bound to the starless midnight of racism and war that the bright daybreak of peace and brotherhood can never become a reality... I believe that unarmed truth and unconditional love will have the final word.
-   </blockquote>
-      <div></div>
-      <cite> Martin Luther King, Jr.</cite> </div>
-    <div class="bubble">
-      <blockquote> Peace is not a relationship of nations. It is a condition of mind brought about by a serenity of soul. Peace is not merely the absence of war. It is also a state of mind. Lasting peace can come only to peaceful people.
-  </blockquote>
-      <div></div>
-      <cite> Jawaharlal Nehru</cite> </div>
-    <div class="bubble">
-      <blockquote> Forgiveness is not always easy. At times, it feels more painful than the wound we suffered, to forgive the one that inflicted it. And yet, there is no peace without forgiveness.
-  </blockquote>
-      <div></div>
-      <cite> Marianne Williamson</cite> </div>
-    <div class="bubble">
-      <blockquote>Of all our dreams today there is none more important - or so hard to realise - than that of peace in the world. May we never lose our faith in it or our resolve to do everything that can be done to convert it one day into reality. </blockquote>
-      <div></div>
-      <cite> Lester B. Pearson</cite> </div>
-  </section>
-  <style>
-    body {
-        background-color: #00B4CC;
-    }
-/* Bubble Slider */
-
-.bubble blockquote {
-	margin: 10px 10px 0;
-	background: #fff;
-	padding: 60px;
-	position: relative;
-	border: none;
-	border-radius: 8px;
-	font-size: 1.25em;
-	color: #1e528e;
-}
-.bubble blockquote:before, .bubble blockquote:after {
-	content: "\201C";
-	position: absolute;
-	font-size: 80px;
-	padding: 10px;
-	line-height: 1;
-	color: #1e528e;
-}
-.bubble blockquote:before {
-	top: 0;
-	left: 10px;
-}
-.bubble blockquote:after {
-	content: "\201D";
-	right: 10px;
-	bottom: -.5em;
-}
-.bubble div {
-	width: 0;
-	height: 0;
-	border-left: 0 solid transparent;
-	border-right: 20px solid transparent;
-	border-top: 20px solid #fff;
-	margin: 0 0 0 60px;
-	margin-bottom: 10px;
-}
-.bubble cite {
-	padding-left: 20px;
-	font-size: 1.25em;
-  color:#f7f7f7;
-}
-
-
-
-
-section {
-	width: 60%;
-	margin: 70px auto;
-   
-}
-
-  </style>
-<script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.bubble');
-    let timer;
-
-    // Show slide with sliding animation
-    const showSlide = (index, direction) => {
-        slides.forEach((slide, i) => {
-            slide.classList.remove('active', 'slide-in-left', 'slide-in-right', 'slide-out-left', 'slide-out-right');
-            if (i === index) {
-                slide.classList.add(direction === 'next' ? 'slide-in-right' : 'slide-in-left', 'active');
-            } else {
-                slide.classList.add(direction === 'next' ? 'slide-out-left' : 'slide-out-right');
-            }
+        document.querySelector('.next').addEventListener('click', () => {
+            stopAutoSlide();
+            nextSlide();
+            startAutoSlide();
         });
-    };
 
-    // Show the next slide
-    const nextSlide = () => {
-        slideIndex = (slideIndex + 1) % slides.length;
-        showSlide(slideIndex, 'next');
-    };
+        document.querySelector('.prev').addEventListener('click', () => {
+            stopAutoSlide();
+            prevSlide();
+            startAutoSlide();
+        });
 
-    // Show the previous slide
-    const prevSlide = () => {
-        slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-        showSlide(slideIndex, 'prev');
-    };
-
-    // Start automatic slide
-    const startAutoSlide = () => {
-        timer = setInterval(nextSlide, 2000); // Auto-slide every 2 seconds
-    };
-
-    // Stop automatic slide
-    const stopAutoSlide = () => {
-        clearInterval(timer);
-    };
-
-    document.querySelector('.next').addEventListener('click', () => {
-        stopAutoSlide();
-        nextSlide();
+        // Start auto-slide on page load
         startAutoSlide();
-    });
 
-    document.querySelector('.prev').addEventListener('click', () => {
-        stopAutoSlide();
-        prevSlide();
-        startAutoSlide();
-    });
-
-    // Start auto-slide on page load
-    startAutoSlide();
-
-    // Pause auto-slide when mouse enters the slider
-    document.querySelector('.quotes-slider').addEventListener('mouseenter', stopAutoSlide);
-    // Resume auto-slide when mouse leaves the slider
-    document.querySelector('.quotes-slider').addEventListener('mouseleave', startAutoSlide);
-</script>
-<!-- link this to work properly -->
+        // Pause auto-slide when mouse enters the slider
+        document.querySelector('.quotes-slider').addEventListener('mouseenter', stopAutoSlide);
+        // Resume auto-slide when mouse leaves the slider
+        document.querySelector('.quotes-slider').addEventListener('mouseleave', startAutoSlide);
+    </script>
+    <!-- link this to work properly -->
 
 
 
@@ -327,49 +376,48 @@ section {
 
 
 
-<div class="text-slide-container">
-    <h2 class="slide-in-text">Amazing Text Animation</h2>
-    <p class="slide-in-text">This text will slide in from the left or right when scrolled into view.</p>
-</div>
-<style>
-    .text-slide-container {
-    width: 100%;
-    padding: 50px;
-    background-color: #926464;
-    margin: 50px 0;
-}
-
-.slide-in-text {
-    opacity: 0;
-    transform: translateX(-100%); 
-    color: black;
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-}
-
-.slide-in-text.slide-in {
-    opacity: 1;
-    transform: translateX(0); 
-}
-
-</style>
-<script>
-const slideInObserverCallback = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('slide-in');
-            observer.unobserve(entry.target);  
+    <div class="text-slide-container">
+        <h2 class="slide-in-text">Amazing Text Animation</h2>
+        <p class="slide-in-text">This text will slide in from the left or right when scrolled into view.</p>
+    </div>
+    <style>
+        .text-slide-container {
+            width: 100%;
+            padding: 50px;
+            background-color: #926464;
+            margin: 50px 0;
         }
-    });
-};
-const slideInObserverOptions = {
-    threshold: 0.2
-};
 
-const slideInObserver = new IntersectionObserver(slideInObserverCallback, slideInObserverOptions);
-const slideInElements = document.querySelectorAll('.slide-in-text');
-slideInElements.forEach(el => slideInObserver.observe(el));
+        .slide-in-text {
+            opacity: 0;
+            transform: translateX(-100%);
+            color: black;
+            transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        }
 
-</scriptx>
+        .slide-in-text.slide-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+    <script>
+        const slideInObserverCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+        const slideInObserverOptions = {
+            threshold: 0.2
+        };
+
+        const slideInObserver = new IntersectionObserver(slideInObserverCallback, slideInObserverOptions);
+        const slideInElements = document.querySelectorAll('.slide-in-text');
+        slideInElements.forEach(el => slideInObserver.observe(el));
+
+    </scriptx>
 </body>
 x
 </html>

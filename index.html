@@ -16,71 +16,81 @@
 </head>
 <style>
     @keyframes appear {
-       from {
+        from {
             opacity: 0;
             scale: 0.5;
         }
 
-        to{
+        to {
             opacity: 1;
             scale: 1;
         }
     }
-    .anime{
+
+    .anime {
         animation: appear 3s linear;
         animation-timeline: view();
         animation-range: entry 0% cover 34%;
     }
+
     @keyframes slideInFromLeft {
-    from {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .text-slide-in {
         opacity: 0;
+        /* Initially hidden */
         transform: translateX(-100%);
+        /* Start from left off-screen */
+        transition: transform 0.2s ease-out, opacity 0.2s ease-out;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
+
+    .text-slide-in.animate {
+        animation: slideInFromLeft 1s ease-out forwards;
     }
-}
 
-.text-slide-in {
-    opacity: 0; /* Initially hidden */
-    transform: translateX(-100%); /* Start from left off-screen */
-    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-}
+    /* Keyframes for zoom-out effect */
+    @keyframes zoomOut {
+        from {
+            opacity: 0;
+            transform: scale(0.5);
+            /* Start from 50% size */
+        }
 
-.text-slide-in.animate {
-    animation: slideInFromLeft 1s ease-out forwards;
-}
-/* Keyframes for zoom-out effect */
-@keyframes zoomOut {
-    from {
+        to {
+            opacity: 1;
+            transform: scale(1);
+            /* End at full size */
+        }
+    }
+
+    /* Common class for elements to apply animation */
+    .zoom-out {
         opacity: 0;
-        transform: scale(0.5); /* Start from 50% size */
+        /* Initially hidden */
+        transform: scale(0.5);
+        /* Start from 50% */
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     }
-    to {
-        opacity: 1;
-        transform: scale(1); /* End at full size */
+
+    .zoom-out.animate {
+        animation: zoomOut 1s ease-out forwards;
     }
-}
-
-/* Common class for elements to apply animation */
-.zoom-out {
-    opacity: 0; /* Initially hidden */
-    transform: scale(0.5); /* Start from 50% */
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.zoom-out.animate {
-    animation: zoomOut 1s ease-out forwards;
-}
-
 </style>
+
 <body>
     <!-- navbar start -->
     <nav class="navbar">
         <div class="left-nav " width="90px" height="70px">
-            <a href="index.html"><img width="90px" height="70px" src="images/rjr-safety-nets-home.png"
-                    alt="RJR safety nets">
+            <a href="#"><img width="90px" height="70px" src="images/rjr-safety-nets-home.png" alt="RJR safety nets">
                 <!-- <h1>RJR Safety Nets</h1> -->
             </a>
         </div>
@@ -92,7 +102,7 @@
                 <span></span>
             </div>
             <ul class="nav-links" id="nav-links-id">
-                <li><a class="nav-btn " href="index.html">Home</a></li>
+                <li><a class="nav-btn " href="#">Home</a></li>
                 <li><a class="nav-btn" href="details/about/">About</a></li>
                 <li class="dropdown">
                     <a class="nav-btn dropbtn">Services <i class="fa-solid fa-angle-down"></i></a>
@@ -108,54 +118,54 @@
                 <div class="mobile-view-cont">
                     <ul class="mobile-view-list">
                         <h3 class="mobile-view-title">Contact Info</h3>
-                            <li class="">
-                                <a class="" href="tel:+917075051812">
-                                    <i class="fa-solid fa-phone"></i>
-                                    +91 70 7505 1812
+                        <li class="">
+                            <a class="" href="tel:+917075051812">
+                                <i class="fa-solid fa-phone"></i>
+                                +91 70 7505 1812
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="" href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                +91 80 7451 4411
+                            </a>
+                        </li>
+                        <li class="text-line">
+                            <a class="text-line-a" href="mailto:ahmedmisba405@gmail.com">
+                                <i class="fa-solid fa-envelope"></i>
+                                rjrsafetynets@gmail.com
+                            </a>
+                        </li>
+                        <h3 class="mobile-view-title">Our Location
+                        </h3>
+                        <li class="text-line">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Bengaluru
+                        </li>
+                        <h3 class="mobile-view-title">Social Links
+                        </h3>
+                        <div class="mobile-view-social-media-grp">
+                            <li class="mobile-social-media-grp">
+                                <a href="">
+                                    <i class="fa-brands fa-facebook-f social-icon"></i>
                                 </a>
                             </li>
-                            <li class="">
-                                <a class="" href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                    +91 80 7451 4411
+                            <li class="mobile-social-media-grp">
+                                <a href="">
+                                    <i class="fa-brands fa-square-instagram social-icon"></i>
                                 </a>
                             </li>
-                            <li class="text-line">
-                                <a class="text-line-a" href="mailto:ahmedmisba405@gmail.com">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    rjrsafetynets@gmail.com
+                            <li class="mobile-social-media-grp">
+                                <a href="">
+                                    <i class="fa-brands fa-x-twitter social-icon"></i>
                                 </a>
                             </li>
-                            <h3 class="mobile-view-title">Our Location
-                            </h3>
-                                <li class="text-line">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    Bengaluru
-                                </li>
-                                <h3 class="mobile-view-title">Social Links
-                                    </h3>
-                                    <div class="mobile-view-social-media-grp">
-                                    <li class="mobile-social-media-grp">
-                                        <a href="">
-                                            <i class="fa-brands fa-facebook-f social-icon"></i>
-                                        </a>
-                                    </li>
-                                    <li class="mobile-social-media-grp">
-                                        <a href="">
-                                            <i class="fa-brands fa-square-instagram social-icon"></i>
-                                        </a>
-                                    </li>
-                                    <li class="mobile-social-media-grp">
-                                        <a href="">
-                                            <i class="fa-brands fa-x-twitter social-icon"></i>
-                                        </a>
-                                    </li>
-                                    <li class="mobile-social-media-grp">
-                                        <a href="">
-                                            <i class="fa-brands fa-linkedin social-icon"></i>
-                                        </a>
-                                    </li>
-                                </div>
+                            <li class="mobile-social-media-grp">
+                                <a href="">
+                                    <i class="fa-brands fa-linkedin social-icon"></i>
+                                </a>
+                            </li>
+                        </div>
                     </ul>
                     <div class="bottom-container">© 2024 RJR Safety Nets All Rights Reserved | Website Designed by
                         <!-- <a class="underline" href="https://www.instagram.com/king_misba/"> @Ahmed Misbahuddin</a> -->
@@ -163,16 +173,16 @@
                 </div>
             </ul>
         </div>
-<script>
-    let hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links-id');
+        <script>
+            let hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links-id');
 
-hamburger.addEventListener('click', () => {
-    // Toggle classes for animation
-    navLinks.classList.toggle('open');
-    hamburger.classList.toggle('active');
-});
-</script>
+            hamburger.addEventListener('click', () => {
+                // Toggle classes for animation
+                navLinks.classList.toggle('open');
+                hamburger.classList.toggle('active');
+            });
+        </script>
     </nav>
 
     <!-- navbar end -->
@@ -190,10 +200,10 @@ hamburger.addEventListener('click', () => {
                         <span class="sub-text text-slide-in animate">THE MAJOR PIGEON NETS DEALERS AND SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><button
-                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
-                        <a href="details/contactus/"><button class="hover-button  zoom-out animate" id="myButton"> Contact Us <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free
+                                Estimate <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                        <a href="details/contactus/"><button class="hover-button  zoom-out animate" id="myButton">
+                                Contact Us <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
                     </div>
                     </p>
                 </div>
@@ -205,13 +215,14 @@ hamburger.addEventListener('click', () => {
                 <div class="text-background"></div>
                 <div class="text-container">
                     <p class="text text-slide-in animate">Construction Safety Nets<br>
-                        <span class="sub-text text-slide-in animate">THE MAJOR CONSTRUCTION NETS DEALERS AND SUPPLIERS.</span>
+                        <span class="sub-text text-slide-in animate">THE MAJOR CONSTRUCTION NETS DEALERS AND
+                            SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><button
-                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
-                        <a href="details/contactus/"><button class="hover-button  zoom-out animate" id="myButton"> Contact Us <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free
+                                Estimate <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                        <a href="details/contactus/"><button class="hover-button  zoom-out animate" id="myButton">
+                                Contact Us <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
                     </div>
                     </p>
                 </div>
@@ -223,13 +234,14 @@ hamburger.addEventListener('click', () => {
                 <div class="text-background"></div>
                 <div class="text-container">
                     <p class="text text-slide-in animate">Monkey Protection Nets<br>
-                        <span class="sub-text text-slide-in animate">THE MAJOR MONKEY PROTECTION NETS DEALERS AND SUPPLIERS.</span>
+                        <span class="sub-text text-slide-in animate">THE MAJOR MONKEY PROTECTION NETS DEALERS AND
+                            SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><button
-                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
-                        <a href="details/contactus/"><button class="hover-button  zoom-out animate " id="myButton"> Contact Us <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free
+                                Estimate <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                        <a href="details/contactus/"><button class="hover-button  zoom-out animate " id="myButton">
+                                Contact Us <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
                     </div>
                     </p>
                 </div>
@@ -241,13 +253,14 @@ hamburger.addEventListener('click', () => {
                 <div class="text-background"></div>
                 <div class="text-container">
                     <p class="text text-slide-in animate">Cricket Practice Nets<br>
-                        <span class="sub-text text-slide-in animate">THE MAJOR CRICKET PRACTICE NETS DEALERS AND SUPPLIERS.</span>
+                        <span class="sub-text text-slide-in animate">THE MAJOR CRICKET PRACTICE NETS DEALERS AND
+                            SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><button
-                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
-                        <a href="details/contactus/"><button class="hover-button  zoom-out animate" id="myButton"> Contact Us <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free
+                                Estimate <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                        <a href="details/contactus/"><button class="hover-button  zoom-out animate" id="myButton">
+                                Contact Us <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
                     </div>
                     </p>
                 </div>
@@ -262,7 +275,8 @@ hamburger.addEventListener('click', () => {
                         <span class="sub-text text-slide-in animate">We Are The Best Choice For Your Safety Nets</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
-                            <button class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate
+                            <button class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free
+                                Estimate
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </button>
                         </a>
@@ -282,10 +296,12 @@ hamburger.addEventListener('click', () => {
                 <div class="text-background"></div>
                 <div class="text-container">
                     <p class="text text-slide-in animate">Duct Area Safety Nets<br>
-                        <span class="sub-text text-slide-in animate">THE MAJOR DUCT AREA NETS DEALERS AND SUPPLIERS.</span>
+                        <span class="sub-text text-slide-in animate">THE MAJOR DUCT AREA NETS DEALERS AND
+                            SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
-                            <button class="hover-button hover-button-space  zoom-out animate " id="myButton">Get A Free Estimate
+                            <button class="hover-button hover-button-space  zoom-out animate " id="myButton">Get A Free
+                                Estimate
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </button>
                         </a>
@@ -306,10 +322,12 @@ hamburger.addEventListener('click', () => {
                 <div class="text-background"></div>
                 <div class="text-container">
                     <p class="text  text-slide-in animate">Balcony Safety Nets<br>
-                        <span class="sub-text text-slide-in animate">THE MAJOR BALCONY NETS DEALERS AND SUPPLIERS.</span>
+                        <span class="sub-text text-slide-in animate">THE MAJOR BALCONY NETS DEALERS AND
+                            SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
-                            <button class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate
+                            <button class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free
+                                Estimate
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </button>
                         </a>
@@ -383,48 +401,48 @@ hamburger.addEventListener('click', () => {
         </div>
     </div>
     <script>let updateCounter = (counter) => {
-        const target = +counter.getAttribute('data-target'); // Get the target number from data-target
-        const count = +counter.innerText.replace('+', '');   // Get the current number
-        const speed = 110;                                   // Adjust the speed of the counting
-        const increment = target / speed;                    // Calculate increment
-    
-        if (count < target) {
-            counter.innerText = `${Math.ceil(count + increment)}+`; // Update counter value
-            setTimeout(() => updateCounter(counter), 20);           // Repeat every 20ms
-        } else {
-            counter.innerText = `${target}+`; // Set the final value
-        }
-    };
-    
-    // Function to start counting on all counters
-    let startCounting = () => {
-        const counters = document.querySelectorAll('.counter');
-        counters.forEach(counter => {
-            updateCounter(counter); // Start counting each counter
-        });
-    };
-    
-    // IntersectionObserver callback function
-    const sectionObserverCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                startCounting();         // Start counting when section is visible
-                observer.unobserve(entry.target); // Stop observing after counting
+            const target = +counter.getAttribute('data-target'); // Get the target number from data-target
+            const count = +counter.innerText.replace('+', '');   // Get the current number
+            const speed = 110;                                   // Adjust the speed of the counting
+            const increment = target / speed;                    // Calculate increment
+
+            if (count < target) {
+                counter.innerText = `${Math.ceil(count + increment)}+`; // Update counter value
+                setTimeout(() => updateCounter(counter), 20);           // Repeat every 20ms
+            } else {
+                counter.innerText = `${target}+`; // Set the final value
             }
-        });
-    };
-    
-    // Create IntersectionObserver to watch the entire section
-    const sectionObserverOptions = {
-        threshold: 0.1 // Trigger when 10% of the section is visible
-    };
-    
-    const sectionObserver = new IntersectionObserver(sectionObserverCallback, sectionObserverOptions);
-    
-    // Observe the entire section container
-    const section = document.querySelector('.full-counters-container');
-    sectionObserver.observe(section);
-        </script>
+        };
+
+        // Function to start counting on all counters
+        let startCounting = () => {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                updateCounter(counter); // Start counting each counter
+            });
+        };
+
+        // IntersectionObserver callback function
+        const sectionObserverCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounting();         // Start counting when section is visible
+                    observer.unobserve(entry.target); // Stop observing after counting
+                }
+            });
+        };
+
+        // Create IntersectionObserver to watch the entire section
+        const sectionObserverOptions = {
+            threshold: 0.1 // Trigger when 10% of the section is visible
+        };
+
+        const sectionObserver = new IntersectionObserver(sectionObserverCallback, sectionObserverOptions);
+
+        // Observe the entire section container
+        const section = document.querySelector('.full-counters-container');
+        sectionObserver.observe(section);
+    </script>
 
 
     <!-- counters box -->
@@ -546,7 +564,59 @@ hamburger.addEventListener('click', () => {
         </div>
     </div>
     <!-- services end -->
+    <!-- client reveiw start -->
+    <div class="client-review">
+        <h3 class="section-title">Client Reviews</h3>
+        <div class="carousel">
+            <div class="group">
+                <div class="bubble">
+                    <blockquote>The Balcony Safety Net installation was flawless! It provides complete peace of mind for
+                        my family, especially with kids around. It blends well with the design of the balcony, and the
+                        quality is top-notch! </blockquote>
+                    <div></div>
+                    <cite> John D.</cite>
+                </div>
+                <div class="bubble">
+                    <blockquote>I’m so happy with the Balcony Safety Net! We live on the 8th floor, and it’s a relief
+                        knowing that our pets are safe now. The installation was quick, and the team was extremely
+                        professional. </blockquote>
+                    <div></div>
+                    <cite> Sarah K.</cite>
+                </div>
+                <div class="bubble">
+                    <blockquote>The Building Safety Net was a lifesaver for our construction site. It prevented several
+                        accidents during ongoing work. Highly durable, and the installation team was very efficient.
+                    </blockquote>
+                    <div></div>
+                    <cite>Rajesh P.</cite>
+                </div>
+            </div>
+            <!-- Add `aria-hidden` to hide the duplicated cards from screen readers. -->
+            <div aria-hidden class="group">
+                <div class="bubble">
+                    <blockquote>As a building manager, safety is my top priority, and these Building Safety Nets
+                        exceeded my expectations. They’re sturdy and give me confidence that our workers are protected
+                        at all times. </blockquote>
+                    <div></div>
+                    <cite> Megha R.</cite>
+                </div>
+                <div class="bubble">
+                    <blockquote>The Monkey Safety Net has saved our home from daily visits by monkeys! It’s a simple but
+                        effective solution, and we haven’t had a single issue since the installation. </blockquote>
+                    <div></div>
+                    <cite> Arjun S</cite>
+                </div>
+                <div class="bubble">
+                    <blockquote>We installed the Monkey Safety Net on our terrace, and it works like a charm. We can now
+                        enjoy our outdoor space without worrying about monkeys. Absolutely worth it!</blockquote>
+                    <div></div>
+                    <cite>Priya M.</cite>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- client reveiw end -->
     <!-- faqs -->
     <h3 class="section-title">FAQ</h3>
     <div class="accordion  ">

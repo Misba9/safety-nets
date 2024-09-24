@@ -301,11 +301,11 @@ h1 {
     border-top: 1px solid;
     border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
 }
-
+/* faqs end */
+/* client review start  */
+/* client review end */
 @media(max-width:767px) {
     html {
         font-size: 14px;
     }
 }
-
-/* faqs end */
