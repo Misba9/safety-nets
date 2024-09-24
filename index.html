@@ -12,8 +12,69 @@
     <script src="script/new.js"></script>
     <link rel="icon" href="images/rjr-safety-nets-home.png">
     <script src="https://kit.fontawesome.com/11ebebdeee.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
+<style>
+    @keyframes appear {
+       from {
+            opacity: 0;
+            scale: 0.5;
+        }
 
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+    .anime{
+        animation: appear 3s linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 34%;
+    }
+    @keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.text-slide-in {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Start from left off-screen */
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.text-slide-in.animate {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+/* Keyframes for zoom-out effect */
+@keyframes zoomOut {
+    from {
+        opacity: 0;
+        transform: scale(0.5); /* Start from 50% size */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* End at full size */
+    }
+}
+
+/* Common class for elements to apply animation */
+.zoom-out {
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.5); /* Start from 50% */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.zoom-out.animate {
+    animation: zoomOut 1s ease-out forwards;
+}
+
+</style>
 <body>
     <!-- navbar start -->
     <nav class="navbar">
@@ -125,13 +186,13 @@ hamburger.addEventListener('click', () => {
                     onclick="showSlides()" alt="Image 1" class="slide-image">
                 <div class="text-background"></div>
                 <div class="text-container">
-                    <p class="text">Pigeon Protection Nets <br>
-                        <span class="sub-text">THE MAJOR PIGEON NETS DEALERS AND SUPPLIERS.</span>
+                    <p class="text text-slide-in animate">Pigeon Protection Nets <br>
+                        <span class="sub-text text-slide-in animate">THE MAJOR PIGEON NETS DEALERS AND SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><button
-                                class="hover-button hover-button-space" id="myButton">Get A Free Estimate <i
+                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate <i
                                     class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
-                        <a href="details/contactus/"><button class="hover-button" id="myButton"> Contact Us <i
+                        <a href="details/contactus/"><button class="hover-button  zoom-out animate" id="myButton"> Contact Us <i
                                     class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
                     </div>
                     </p>
@@ -143,13 +204,13 @@ hamburger.addEventListener('click', () => {
                     class="slide-image">
                 <div class="text-background"></div>
                 <div class="text-container">
-                    <p class="text">Construction Safety Nets<br>
-                        <span class="sub-text">THE MAJOR CONSTRUCTION NETS DEALERS AND SUPPLIERS.</span>
+                    <p class="text text-slide-in animate">Construction Safety Nets<br>
+                        <span class="sub-text text-slide-in animate">THE MAJOR CONSTRUCTION NETS DEALERS AND SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><button
-                                class="hover-button hover-button-space" id="myButton">Get A Free Estimate <i
+                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate <i
                                     class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
-                        <a href="details/contactus/"><button class="hover-button" id="myButton"> Contact Us <i
+                        <a href="details/contactus/"><button class="hover-button  zoom-out animate" id="myButton"> Contact Us <i
                                     class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
                     </div>
                     </p>
@@ -161,13 +222,13 @@ hamburger.addEventListener('click', () => {
                     class="slide-image">
                 <div class="text-background"></div>
                 <div class="text-container">
-                    <p class="text">Monkey Protection Nets<br>
-                        <span class="sub-text">THE MAJOR MONKEY PROTECTION NETS DEALERS AND SUPPLIERS.</span>
+                    <p class="text text-slide-in animate">Monkey Protection Nets<br>
+                        <span class="sub-text text-slide-in animate">THE MAJOR MONKEY PROTECTION NETS DEALERS AND SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><button
-                                class="hover-button hover-button-space" id="myButton">Get A Free Estimate <i
+                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate <i
                                     class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
-                        <a href="details/contactus/"><button class="hover-button" id="myButton"> Contact Us <i
+                        <a href="details/contactus/"><button class="hover-button  zoom-out animate " id="myButton"> Contact Us <i
                                     class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
                     </div>
                     </p>
@@ -179,13 +240,13 @@ hamburger.addEventListener('click', () => {
                     class="slide-image">
                 <div class="text-background"></div>
                 <div class="text-container">
-                    <p class="text">Cricket Practice Nets<br>
-                        <span class="sub-text">THE MAJOR CRICKET PRACTICE NETS DEALERS AND SUPPLIERS.</span>
+                    <p class="text text-slide-in animate">Cricket Practice Nets<br>
+                        <span class="sub-text text-slide-in animate">THE MAJOR CRICKET PRACTICE NETS DEALERS AND SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><button
-                                class="hover-button hover-button-space" id="myButton">Get A Free Estimate <i
+                                class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate <i
                                     class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
-                        <a href="details/contactus/"><button class="hover-button" id="myButton"> Contact Us <i
+                        <a href="details/contactus/"><button class="hover-button  zoom-out animate" id="myButton"> Contact Us <i
                                     class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
                     </div>
                     </p>
@@ -197,16 +258,16 @@ hamburger.addEventListener('click', () => {
                     class="slide-image">
                 <div class="text-background"></div>
                 <div class="text-container">
-                    <p class="text">Children Safety Nets<br>
-                        <span class="sub-text">We Are The Best Choice For Your Safety Nets</span>
+                    <p class="text text-slide-in animate">Children Safety Nets<br>
+                        <span class="sub-text text-slide-in animate">We Are The Best Choice For Your Safety Nets</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
-                            <button class="hover-button hover-button-space" id="myButton">Get A Free Estimate
+                            <button class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </button>
                         </a>
                         <a href="details/contactus/">
-                            <button class="hover-button" id="myButton"> Contact Us
+                            <button class="hover-button  zoom-out animate" id="myButton"> Contact Us
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </button>
                         </a>
@@ -220,16 +281,16 @@ hamburger.addEventListener('click', () => {
                     class="slide-image">
                 <div class="text-background"></div>
                 <div class="text-container">
-                    <p class="text">Duct Area Safety Nets<br>
-                        <span class="sub-text">THE MAJOR DUCT AREA NETS DEALERS AND SUPPLIERS.</span>
+                    <p class="text text-slide-in animate">Duct Area Safety Nets<br>
+                        <span class="sub-text text-slide-in animate">THE MAJOR DUCT AREA NETS DEALERS AND SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
-                            <button class="hover-button hover-button-space" id="myButton">Get A Free Estimate
+                            <button class="hover-button hover-button-space  zoom-out animate " id="myButton">Get A Free Estimate
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </button>
                         </a>
                         <a href="details/contactus/">
-                            <button class="hover-button" id="myButton"> Contact Us
+                            <button class="hover-button  zoom-out animate" id="myButton"> Contact Us
                                 <i class="fa-solid fa-arrow-up-right-from-square">
                                 </i>
                             </button>
@@ -244,16 +305,16 @@ hamburger.addEventListener('click', () => {
                     class="slide-image">
                 <div class="text-background"></div>
                 <div class="text-container">
-                    <p class="text">Balcony Safety Nets<br>
-                        <span class="sub-text">THE MAJOR BALCONY NETS DEALERS AND SUPPLIERS.</span>
+                    <p class="text  text-slide-in animate">Balcony Safety Nets<br>
+                        <span class="sub-text text-slide-in animate">THE MAJOR BALCONY NETS DEALERS AND SUPPLIERS.</span>
                     <div class="button-container">
                         <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
-                            <button class="hover-button hover-button-space" id="myButton">Get A Free Estimate
+                            <button class="hover-button hover-button-space  zoom-out animate" id="myButton">Get A Free Estimate
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </button>
                         </a>
                         <a href="details/contactus/">
-                            <button class="hover-button" id="myButton"> Contact Us
+                            <button class="hover-button  zoom-out animate" id="myButton"> Contact Us
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </button>
                         </a>
@@ -272,28 +333,25 @@ hamburger.addEventListener('click', () => {
                 <span class="dot" onclick="currentSlide(7)"></span>
             </div>
         </div>
-        <!-- Next and Previous buttons -->
-        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
     </section>
 
     <!-- hero section end -->
     <!-- main box start -->
     </div>
-    <div class="main-boxes">
-        <h3 class="section-title">why to choose us?</h3>
-        <div class="parent-boxes">
-            <div class="box-1">
+    <div class="main-boxes ">
+        <h3 class="section-title ">why to choose us?</h3>
+        <div class="parent-boxes ">
+            <div class="box-1 anime">
                 <img class="box-1-img" height="80px" width="60px" src="images/quality-rem.png" alt="">
                 <h3 class="box-1-title">Quality</h3>
                 <p class="box-1-text">We use high quality nylon nets for strong and long lasting safety nets.</p>
             </div>
-            <div class="box-1">
+            <div class="box-1 anime">
                 <img class="box-1-img" height="80px" width="60px" src="images/safty-rem.png" alt="">
                 <h3 class="box-1-title">Safety</h3>
                 <p class="box-1-text">Safeguarding Your World with Unmatched Excellence.</p>
             </div>
-            <div class="box-1">
+            <div class="box-1 anime">
                 <img class="box-1-img" height="80px" width="60px" src="images/time-rem.png" alt="">
                 <h3 class="box-1-title">Timely Work</h3>
                 <p class="box-1-text">Excellence Delivered Right on Time.</p>
@@ -304,73 +362,77 @@ hamburger.addEventListener('click', () => {
     <!-- main boxs end-->
     <!-- counters box -->
     <div class="full-counters-container">
-        <h3 class="section-title">Our Achievements</h3>
-        <div class="counters-container">
-            <div class="counter-box">
+        <h3 class="section-title ">Our Achievements</h3>
+        <div class="counters-container anime">
+            <div class="counter-box anime">
                 <h2 class="counter" data-target="1423">0+</h2>
                 <p>Happy Clients</p>
             </div>
-            <div class="counter-box">
+            <div class="counter-box anime">
                 <h2 class="counter" data-target="8">0+</h2>
                 <p>Years Experience</p>
             </div>
-            <div class="counter-box">
+            <div class="counter-box anime">
                 <h2 class="counter" data-target="1500">0+</h2>
                 <p>Projects</p>
             </div>
-            <div class="counter-box">
+            <div class="counter-box anime">
                 <h2 class="counter" data-target="28">0+</h2>
                 <p>Our Team</p>
             </div>
         </div>
     </div>
-    <script>
-        let updateCounter = (counter) => {
-            const target = +counter.getAttribute('data-target'); // Get the target number from data-target
-            const count = +counter.innerText.replace('+', '');   // Get the current number
-            const speed = 110;                                   // Adjust the speed of the counting
-            const increment = target / speed;                    // Calculate increment
-
-            if (count < target) {
-                counter.innerText = `${Math.ceil(count + increment)}+`; // Update counter value
-                setTimeout(() => updateCounter(counter), 20);           // Repeat every 20ms
-            } else {
-                counter.innerText = `${target}+`; // Set the final value
-            }
-        };
-
-        // IntersectionObserver callback function
-        const observerCallback = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = entry.target;           // The observed counter element
-                    updateCounter(counter);                 // Start counting when visible
-                    observer.unobserve(counter);            // Stop observing this element after counting
-                }
-            });
-        };
-
-        // Create the IntersectionObserver instance
-        const observerOptions = {
-            threshold: 0.1 // Trigger when 10% of the counter is visible
-        };
-
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-        // Observe each counter individually
+    <script>let updateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target'); // Get the target number from data-target
+        const count = +counter.innerText.replace('+', '');   // Get the current number
+        const speed = 110;                                   // Adjust the speed of the counting
+        const increment = target / speed;                    // Calculate increment
+    
+        if (count < target) {
+            counter.innerText = `${Math.ceil(count + increment)}+`; // Update counter value
+            setTimeout(() => updateCounter(counter), 20);           // Repeat every 20ms
+        } else {
+            counter.innerText = `${target}+`; // Set the final value
+        }
+    };
+    
+    // Function to start counting on all counters
+    let startCounting = () => {
         const counters = document.querySelectorAll('.counter');
         counters.forEach(counter => {
-            observer.observe(counter); // Start observing each counter element
+            updateCounter(counter); // Start counting each counter
         });
-    </script>
+    };
+    
+    // IntersectionObserver callback function
+    const sectionObserverCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounting();         // Start counting when section is visible
+                observer.unobserve(entry.target); // Stop observing after counting
+            }
+        });
+    };
+    
+    // Create IntersectionObserver to watch the entire section
+    const sectionObserverOptions = {
+        threshold: 0.1 // Trigger when 10% of the section is visible
+    };
+    
+    const sectionObserver = new IntersectionObserver(sectionObserverCallback, sectionObserverOptions);
+    
+    // Observe the entire section container
+    const section = document.querySelector('.full-counters-container');
+    sectionObserver.observe(section);
+        </script>
 
 
     <!-- counters box -->
     <!-- services start -->
     <div class="services" id="services">
-        <h3 class="section-title">Our Services</h3>
+        <h3 class="section-title ">Our Services</h3>
         <div class="services-container">
-            <div class="services-box">
+            <div class="services-box  anime">
                 <div class="services-img-box">
                     <a href="pages/Balcony-Safety-Nets/">
                         <img class="services-img" height="180px" width="260px" src="images/balcony.jpg" alt=""
@@ -384,7 +446,7 @@ hamburger.addEventListener('click', () => {
                 </p>
                 <a href="pages/Balcony-Safety-Nets/" class="learn-more">Learn More</a>
             </div>
-            <div class="services-box">
+            <div class="services-box anime">
                 <div class="services-img-box">
                     <a href="pages/Pigeon-Safety-Nets/">
                         <img class="services-img" height="180px" width="260px" src="images/anri-bird-net.jpg" alt=""
@@ -398,7 +460,7 @@ hamburger.addEventListener('click', () => {
                 </p>
                 <a href="pages/Pigeon-Safety-Nets/" class="learn-more">Learn More</a>
             </div>
-            <div class="services-box">
+            <div class="services-box anime">
                 <div class="services-img-box">
                     <a href="pages/Cricket-Practice-Nets/">
                         <img class="services-img" height="180px" width="260px" src="images/cricket-nets.jpg" alt=""
@@ -412,7 +474,7 @@ hamburger.addEventListener('click', () => {
                 </p>
                 <a href="pages/Cricket-Practice-Nets/" class="learn-more">Learn More</a>
             </div>
-            <div class="services-box">
+            <div class="services-box anime">
                 <div class="services-img-box">
                     <a href="pages/Balcony-Safety-Nets/">
                         <img class="services-img" height="180px" width="260px"
@@ -425,7 +487,7 @@ hamburger.addEventListener('click', () => {
                 </p>
                 <a href="pages/Balcony-Safety-Nets/" class="learn-more">Learn More</a>
             </div>
-            <div class="services-box">
+            <div class="services-box anime">
                 <div class="services-img-box">
                     <a href="pages/Children's-Safety-Nets/">
                         <img class="services-img" height="180px" width="260px" src="images/children-safety-net.jpg"
@@ -439,7 +501,7 @@ hamburger.addEventListener('click', () => {
                 <a href="pages/Children's-Safety-Nets/" class="learn-more">Learn More</a>
             </div>
 
-            <div class="services-box">
+            <div class="services-box anime">
                 <div class="services-img-box">
                     <a href="pages/Monkey-Safety-Nets/">
                         <img class="services-img" height="180px" width="260px" src="images/monkey Safety Nets.jpg"
@@ -454,7 +516,7 @@ hamburger.addEventListener('click', () => {
                 <a href="pages/Monkey-Safety-Nets/" class="learn-more">Learn More</a>
             </div>
 
-            <div class="services-box">
+            <div class="services-box anime">
                 <div class="services-img-box">
                     <a href="pages/Balcony-Safety-Nets/">
                         <img class="services-img" height="180px" width="260px" src="images/brids-safty-nets.jpeg" alt=""
@@ -467,7 +529,7 @@ hamburger.addEventListener('click', () => {
                 </p>
                 <a href="pages/Balcony-Safety-Nets/" class="learn-more">Learn More</a>
             </div>
-            <div class="services-box">
+            <div class="services-box anime">
                 <div class="services-img-box">
                     <a href="pages/Pigeon-Safety-Nets/">
                         <img class="services-img" height="180px" width="260px" src="images/anti-bird-safety-nets.jpg"
@@ -487,8 +549,8 @@ hamburger.addEventListener('click', () => {
 
     <!-- faqs -->
     <h3 class="section-title">FAQ</h3>
-    <div class="accordion">
-        <div class="accordion-item">
+    <div class="accordion  ">
+        <div class="accordion-item anime">
             <div class="accordion-item-header">
                 What are safety nets?
             </div>
@@ -500,7 +562,7 @@ hamburger.addEventListener('click', () => {
                 </div>
             </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item anime">
             <div class="accordion-item-header">
                 What types of safety nets are available?
             </div>
@@ -514,7 +576,7 @@ hamburger.addEventListener('click', () => {
                 </div>
             </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item anime">
             <div class="accordion-item-header">
                 Why should I install a safety net?
             </div>
@@ -526,7 +588,7 @@ hamburger.addEventListener('click', () => {
                 </div>
             </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item anime">
             <div class="accordion-item-header">
                 Are bird protection nets harmful to birds?
             </div>
@@ -537,7 +599,7 @@ hamburger.addEventListener('click', () => {
                 </div>
             </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item anime">
             <div class="accordion-item-header">
                 Can safety nets be installed in balconies or windows?
             </div>
@@ -548,7 +610,7 @@ hamburger.addEventListener('click', () => {
                 </div>
             </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item anime">
             <div class="accordion-item-header">
                 Are child safety nets easy to remove when not needed?
             </div>
@@ -582,7 +644,7 @@ hamburger.addEventListener('click', () => {
     <section class="contact-c" id="contact">
         <h3 class="section-title">Contact Us</h3>
         <div class="full-form">
-            <div class="left-form">
+            <div class="left-form anime">
                 <!-- <h3>Get in Contact</h3> -->
                 <div class="phone left-form-link">
                     <a href="tel:+917075051812" class="left-form-icon">
@@ -618,7 +680,7 @@ hamburger.addEventListener('click', () => {
                     </a>
                 </div>
             </div>
-            <div class="form-c">
+            <div class="form-c anime">
                 <!-- <h3>Get in Touch</h3> -->
                 <input class="form-input-2" type="text" name="name" id="name" placeholder="Name">
                 <input class="form-input-2" type="phone" name="phone" id="phone" placeholder="Phone Number">

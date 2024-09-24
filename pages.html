@@ -11,183 +11,9 @@
 </head>
 
 <body>
-    <!-- navbar start -->
-    <nav class="navbar">
-        <div class="left-nav " width="90px" height="70px">
-            <img width="90px" height="70px" src="images/rjr safety nets final logo-b.png" alt="Eastern Motors">
-            <h1></h1>
-        </div>
-        <div class="right-nav">
-            <ul class="nav-links" id="nav-links-id">
-
-                <li><a class="nav-btn " href="#">Home</a></li>
-                <li><a class="nav-btn" href="#">About</a></li>
-                <li class="dropdown">
-                    <a class="nav-btn dropbtn" href="pages.html">Services</a>
-                    <div class="dropdown-content">
-                        <a href="#">Product 1</a>
-                        <a href="#">Product 2</a>
-                        <a href="#">Product 3</a>
-                    </div>
-                </li>
-                <li><a class="nav-btn" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <a class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars bars"></i>
-        </a>
-    </nav>
-    <!-- navbar end -->
-
-
 <br>
 <br>
 <br>
-
-    <!-- 
-    <div class="image-slider">
-<div class="carousel-container">
-    <div class="carousel">
-        <img class="carousel-item" src="images/all-sports.jpg" alt="Image 1">
-        <div class="hover-text">Image 1 Description</div>
-        <img class="carousel-item" src="images/balcony.jpg" alt="Image 2">
-        <div class="hover-text">Image 1 Description</div>
-        <img class="carousel-item" src="images/Construction Safety Nets-2.jpg" alt="Image 3">
-        <div class="hover-text">Image 1 Description</div>
-        <img class="carousel-item" src="images/cricket-nets.jpg" alt="Image 4">
-        <div class="hover-text">Image 1 Description</div>
-        <img class="carousel-item" src="images/anri-bird-net.jpg" alt="Image 1">
-        <div class="hover-text">Image 1 Description</div>
-        <img class="carousel-item" src="images/brids-safty-nets.jpeg" alt="Image 2">
-        <div class="hover-text">Image 1 Description</div>
-        <img class="carousel-item" src="images/monkey Safety Nets.jpg" alt="Image 3">
-        <div class="hover-text">Image 1 Description</div>
-        <img class="carousel-item" src="images/balcony.jpg" alt="Image 4">
-        <div class="hover-text">Image 1 Description</div>
-    </div>
-</div>
-    </div>
-<style>
-/* General Styles */
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-} */
-
-.carousel-container {
-    overflow: hidden;
-    width: 60%;
-    max-width: 900px;
-    position: relative;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: fit-content;
-}
-
-.carousel-item {
-    flex: 0 0 33.33%;
-    height: 300px;
-    position: relative;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hover-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-/* Hover Effect */
-.carousel-item:hover .hover-text {
-    opacity: 1;
-}
-
-/* General Styles */
-
-.image-slider {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-
-.carousel-container {
-    overflow: hidden;
-    width: 80%; /* Adjust as needed */
-    max-width: 1200px;
-    position: relative;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth sliding */
-}
-
-.carousel-item {
-    position: relative;
-    flex: 0 0 33.333%; /* 20% width ensures 5 images are shown at a time */
-    height: 200px; /* Set the desired height for the images */
-    width: 33%;
-    object-fit: cover; /* Ensures the image fits without distortion */
-    border-right: 2px solid #fff; /* Space between images */
-}
-
-
-</style>
-<script>const carousel = document.querySelector('.carousel');
-    const totalImages = document.querySelectorAll('.carousel-item').length;
-    const imagesPerSlide = 3; // Number of images shown at once
-    
-    let currentIndex = 0;
-    const slideInterval = 3000; // Slide every 3 seconds
-    const slideWidthPercentage = 33; // Each slide moves by 20% of the container
-    
-    function slideImages() {
-        currentIndex++;
-    
-        if (currentIndex > totalImages - imagesPerSlide) {
-            // Reset to the first slide when reaching the end
-            currentIndex = 0;
-        }
-        
-        updateCarousel();
-    }
-    
-    function updateCarousel() {
-        const offset = -currentIndex * slideWidthPercentage; // Move the carousel by 20% for each image
-        carousel.style.transform = `translateX(${offset}%)`;
-    }
-    
-    // Set up the interval for automatic sliding
-    setInterval(slideImages, slideInterval);
-    
-</script> -->
 
     <style>
  .carousel {
@@ -214,24 +40,21 @@
   .group {
     display: flex;
     gap: 20px;
-    /* Add padding to the right to create a gap between the last and first card. */
     padding-right: 20px;
-    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    will-change: transform; 
     animation: scrolling 10s linear infinite;
   }
 
   .card {
     width: 100%;
     color: white;
-    border-radius: 24px;
-    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
-    padding: 20px;
+    padding: 5px;
     font-size: xx-large;
     justify-content: center;
     align-items: center;
     min-height: 200px;
 
-    &:nth-child(1) {
+    /* &:nth-child(1) {
       background: #7958ff;
     }
 
@@ -241,7 +64,11 @@
 
     &:nth-child(3) {
       background: #4300da;
-    }
+    } */
+  }
+  .card-slide-img{
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
   }
 
    </style>
@@ -271,7 +98,10 @@
           </div>
     </div>
 
-
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 
     <div class="counters-container">
         <div class="counter-box" data-target="5000">
@@ -483,6 +313,63 @@ section {
 </script>
 <!-- link this to work properly -->
 
-</body>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="text-slide-container">
+    <h2 class="slide-in-text">Amazing Text Animation</h2>
+    <p class="slide-in-text">This text will slide in from the left or right when scrolled into view.</p>
+</div>
+<style>
+    .text-slide-container {
+    width: 100%;
+    padding: 50px;
+    background-color: #926464;
+    margin: 50px 0;
+}
+
+.slide-in-text {
+    opacity: 0;
+    transform: translateX(-100%); 
+    color: black;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.slide-in-text.slide-in {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+</style>
+<script>
+const slideInObserverCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in');
+            observer.unobserve(entry.target);  
+        }
+    });
+};
+const slideInObserverOptions = {
+    threshold: 0.2
+};
+
+const slideInObserver = new IntersectionObserver(slideInObserverCallback, slideInObserverOptions);
+const slideInElements = document.querySelectorAll('.slide-in-text');
+slideInElements.forEach(el => slideInObserver.observe(el));
+
+</scriptx>
+</body>
+x
 </html>
