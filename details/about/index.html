@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balcony Sefety Nets</title>
-    <!-- <link rel="stylesheet" href="../../css/main.css"> -->
     <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="stylesheet" href="../../css/new.css">
     <script src="../../script/main.js"></script>
     <link rel="icon" href="../../images/rjr-safety-nets-home.png">
     <script src="https://kit.fontawesome.com/11ebebdeee.js" crossorigin="anonymous"></script>
@@ -17,17 +17,22 @@
     <!-- navbar start -->
     <nav class="navbar">
         <div class="left-nav " width="90px" height="70px">
-            <a href="../../index.html"><img width="90px" height="70px" src="../../images/rjr_safety_nets_pages.png"
+            <a href="../../"><img width="90px" height="70px" src="../../images/rjr_safety_nets_pages.png"
                     alt="Eastern Motors">
                 <!-- <h1>RJR Safety Nets</h1> -->
             </a>
         </div>
         <div class="right-nav">
-            <ul class="nav-links" id="nav-links-id">
-
-                <li><a class="nav-btn " href="../../index.html">Home</a></li>
-                <li><a class="nav-btn" href="../about/">About</a></li>
-                <li class="dropdown"><a class="nav-btn dropbtn">Services</a>
+            <div class="hamburger " id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links " id="nav-links-id">
+                <li><a class="nav-btn " href="../../">Home</a></li>
+                <li><a class="nav-btn" href="#">About</a></li>
+                <li class="dropdown">
+                    <a class="nav-btn dropbtn">Services <i class="fa-solid fa-angle-down"></i></a>
                     <div class="dropdown-content">
                         <a href="../../pages/Balcony-Safety-Nets/">Balcony Safety Nets</a>
                         <a href="../../pages/Children's-Safety-Nets/">Children's Safety Nets</a>
@@ -37,11 +42,75 @@
                     </div>
                 </li>
                 <li><a class="nav-btn" href="../contactus/">Contact</a></li>
+                <div class="mobile-view-cont">
+                    <ul class="mobile-view-list">
+                        <h3 class="mobile-view-title">Contact Info</h3>
+                        <li class="">
+                            <a class="" href="tel:+917075051812">
+                                <i class="fa-solid fa-phone"></i>
+                                +91 70 7505 1812
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="" href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                +91 80 7451 4411
+                            </a>
+                        </li>
+                        <li class="text-line">
+                            <a class="text-line-a" href="mailto:ahmedmisba405@gmail.com">
+                                <i class="fa-solid fa-envelope"></i>
+                                rjrsafetynets@gmail.com
+                            </a>
+                        </li>
+                        <h3 class="mobile-view-title">Our Location
+                        </h3>
+                        <li class="text-line">
+                            <a href=""><i class="fa-solid fa-location-dot"></i>
+                            Bengaluru</a>
+                        </li>
+                        <h3 class="mobile-view-title">Social Links
+                        </h3>
+                        <div class="mobile-view-social-media-grp">
+                            <li class="mobile-social-media-grp">
+                                <a href="">
+                                    <i class="fa-brands fa-facebook-f social-icon"></i>
+                                </a>
+                            </li>
+                            <li class="mobile-social-media-grp">
+                                <a href="">
+                                    <i class="fa-brands fa-square-instagram social-icon"></i>
+                                </a>
+                            </li>
+                            <li class="mobile-social-media-grp">
+                                <a href="">
+                                    <i class="fa-brands fa-x-twitter social-icon"></i>
+                                </a>
+                            </li>
+                            <li class="mobile-social-media-grp">
+                                <a href="">
+                                    <i class="fa-brands fa-linkedin social-icon"></i>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                    <div class="bottom-container">© 2024 RJR Safety Nets All Rights Reserved | Website Designed by
+                        <!-- <a class="underline" href="https://www.instagram.com/king_misba/"> @Ahmed Misbahuddin</a> -->
+                    </div>
+                </div>
             </ul>
         </div>
-        <a class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars bars"></i>
-        </a>
+        <script>
+            let hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links-id');
+    
+            hamburger.addEventListener('click', () => {
+                // Toggle classes for animation
+                navLinks.classList.toggle('open');
+                hamburger.classList.toggle('active');
+            });
+    
+        </script>
     </nav>
     <!-- navbar end -->
     <!-- poster -->
@@ -143,7 +212,7 @@
     <footer>
         <div class="top-container">
             <div class="footer-container-1">
-                <img  height="150px" src="../../images/rjr-safety-nets-footer.png" alt="RJR
+                <img height="150px" src="../../images/rjr-safety-nets-footer.png" alt="RJR
                  safety nets">
                 <!-- <p class="text-line">RJR Safety Nets having 8+ Years of Experience in Netting. We understood the quality
                     lacking in current netting industry. Local Players gives wrong commitments, false details about the

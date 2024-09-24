@@ -340,6 +340,149 @@
     });
 </script>
 
+
+
+
+<section class="quotes">
+    <div class="bubble">
+      <blockquote>I refuse to accept the view that mankind is so tragically bound to the starless midnight of racism and war that the bright daybreak of peace and brotherhood can never become a reality... I believe that unarmed truth and unconditional love will have the final word.
+   </blockquote>
+      <div></div>
+      <cite> Martin Luther King, Jr.</cite> </div>
+    <div class="bubble">
+      <blockquote> Peace is not a relationship of nations. It is a condition of mind brought about by a serenity of soul. Peace is not merely the absence of war. It is also a state of mind. Lasting peace can come only to peaceful people.
+  </blockquote>
+      <div></div>
+      <cite> Jawaharlal Nehru</cite> </div>
+    <div class="bubble">
+      <blockquote> Forgiveness is not always easy. At times, it feels more painful than the wound we suffered, to forgive the one that inflicted it. And yet, there is no peace without forgiveness.
+  </blockquote>
+      <div></div>
+      <cite> Marianne Williamson</cite> </div>
+    <div class="bubble">
+      <blockquote>Of all our dreams today there is none more important - or so hard to realise - than that of peace in the world. May we never lose our faith in it or our resolve to do everything that can be done to convert it one day into reality. </blockquote>
+      <div></div>
+      <cite> Lester B. Pearson</cite> </div>
+  </section>
+  <style>
+    body {
+        background-color: #00B4CC;
+    }
+/* Bubble Slider */
+
+.bubble blockquote {
+	margin: 10px 10px 0;
+	background: #fff;
+	padding: 60px;
+	position: relative;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.25em;
+	color: #1e528e;
+}
+.bubble blockquote:before, .bubble blockquote:after {
+	content: "\201C";
+	position: absolute;
+	font-size: 80px;
+	padding: 10px;
+	line-height: 1;
+	color: #1e528e;
+}
+.bubble blockquote:before {
+	top: 0;
+	left: 10px;
+}
+.bubble blockquote:after {
+	content: "\201D";
+	right: 10px;
+	bottom: -.5em;
+}
+.bubble div {
+	width: 0;
+	height: 0;
+	border-left: 0 solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #fff;
+	margin: 0 0 0 60px;
+	margin-bottom: 10px;
+}
+.bubble cite {
+	padding-left: 20px;
+	font-size: 1.25em;
+  color:#f7f7f7;
+}
+
+
+
+
+section {
+	width: 60%;
+	margin: 70px auto;
+   
+}
+
+  </style>
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.bubble');
+    let timer;
+
+    // Show slide with sliding animation
+    const showSlide = (index, direction) => {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active', 'slide-in-left', 'slide-in-right', 'slide-out-left', 'slide-out-right');
+            if (i === index) {
+                slide.classList.add(direction === 'next' ? 'slide-in-right' : 'slide-in-left', 'active');
+            } else {
+                slide.classList.add(direction === 'next' ? 'slide-out-left' : 'slide-out-right');
+            }
+        });
+    };
+
+    // Show the next slide
+    const nextSlide = () => {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex, 'next');
+    };
+
+    // Show the previous slide
+    const prevSlide = () => {
+        slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+        showSlide(slideIndex, 'prev');
+    };
+
+    // Start automatic slide
+    const startAutoSlide = () => {
+        timer = setInterval(nextSlide, 2000); // Auto-slide every 2 seconds
+    };
+
+    // Stop automatic slide
+    const stopAutoSlide = () => {
+        clearInterval(timer);
+    };
+
+    document.querySelector('.next').addEventListener('click', () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+    });
+
+    // Start auto-slide on page load
+    startAutoSlide();
+
+    // Pause auto-slide when mouse enters the slider
+    document.querySelector('.quotes-slider').addEventListener('mouseenter', stopAutoSlide);
+    // Resume auto-slide when mouse leaves the slider
+    document.querySelector('.quotes-slider').addEventListener('mouseleave', startAutoSlide);
+</script>
+<!-- link this to work properly -->
+
 </body>
 
 </html>

@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RJR - Safety Nets </title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/new.css">
+    <!-- navbar and faqs style in this file -->
     <script src="script/main.js"></script>
+    <script src="script/new.js"></script>
     <link rel="icon" href="images/rjr-safety-nets-home.png">
     <script src="https://kit.fontawesome.com/11ebebdeee.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
 <body>
@@ -21,11 +23,18 @@
                 <!-- <h1>RJR Safety Nets</h1> -->
             </a>
         </div>
+
         <div class="right-nav">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links" id="nav-links-id">
                 <li><a class="nav-btn " href="index.html">Home</a></li>
                 <li><a class="nav-btn" href="details/about/">About</a></li>
-                <li class="dropdown"><a class="nav-btn dropbtn">Services</a>
+                <li class="dropdown">
+                    <a class="nav-btn dropbtn">Services <i class="fa-solid fa-angle-down"></i></a>
                     <div class="dropdown-content">
                         <a href="pages/Balcony-Safety-Nets/">Balcony Safety Nets</a>
                         <a href="pages/Children's-Safety-Nets/">Children's Safety Nets</a>
@@ -35,12 +44,76 @@
                     </div>
                 </li>
                 <li><a class="nav-btn" href="details/contactus/">Contact</a></li>
+                <div class="mobile-view-cont">
+                    <ul class="mobile-view-list">
+                        <h3 class="mobile-view-title">Contact Info</h3>
+                            <li class="">
+                                <a class="" href="tel:+917075051812">
+                                    <i class="fa-solid fa-phone"></i>
+                                    +91 70 7505 1812
+                                </a>
+                            </li>
+                            <li class="">
+                                <a class="" href="https://wa.me/918074514411?text=Hi%20There!" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    +91 80 7451 4411
+                                </a>
+                            </li>
+                            <li class="text-line">
+                                <a class="text-line-a" href="mailto:ahmedmisba405@gmail.com">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    rjrsafetynets@gmail.com
+                                </a>
+                            </li>
+                            <h3 class="mobile-view-title">Our Location
+                            </h3>
+                                <li class="text-line">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Bengaluru
+                                </li>
+                                <h3 class="mobile-view-title">Social Links
+                                    </h3>
+                                    <div class="mobile-view-social-media-grp">
+                                    <li class="mobile-social-media-grp">
+                                        <a href="">
+                                            <i class="fa-brands fa-facebook-f social-icon"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mobile-social-media-grp">
+                                        <a href="">
+                                            <i class="fa-brands fa-square-instagram social-icon"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mobile-social-media-grp">
+                                        <a href="">
+                                            <i class="fa-brands fa-x-twitter social-icon"></i>
+                                        </a>
+                                    </li>
+                                    <li class="mobile-social-media-grp">
+                                        <a href="">
+                                            <i class="fa-brands fa-linkedin social-icon"></i>
+                                        </a>
+                                    </li>
+                                </div>
+                    </ul>
+                    <div class="bottom-container">© 2024 RJR Safety Nets All Rights Reserved | Website Designed by
+                        <!-- <a class="underline" href="https://www.instagram.com/king_misba/"> @Ahmed Misbahuddin</a> -->
+                    </div>
+                </div>
             </ul>
         </div>
-        <a class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars bars"></i>
-        </a>
+<script>
+    let hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links-id');
+
+hamburger.addEventListener('click', () => {
+    // Toggle classes for animation
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active');
+});
+</script>
     </nav>
+
     <!-- navbar end -->
     <div class="top-space"></div>
     <!-- hero section start -->
@@ -230,34 +303,34 @@
     </div>
     <!-- main boxs end-->
     <!-- counters box -->
-     <div class="full-counters-container">
-    <h3 class="section-title">Our Achievements</h3>
-     <div class="counters-container">
-        <div class="counter-box">
-            <h2 class="counter" data-target="1423">0+</h2>
-            <p>Happy Clients</p>
-        </div>
-        <div class="counter-box">
-            <h2 class="counter" data-target="8">0+</h2>
-            <p>Years Experience</p>
-        </div>
-        <div class="counter-box">
-            <h2 class="counter" data-target="1500">0+</h2>
-            <p>Projects</p>
-        </div>
-        <div class="counter-box">
-            <h2 class="counter" data-target="28">0+</h2>
-            <p>Our Team</p>
+    <div class="full-counters-container">
+        <h3 class="section-title">Our Achievements</h3>
+        <div class="counters-container">
+            <div class="counter-box">
+                <h2 class="counter" data-target="1423">0+</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div class="counter-box">
+                <h2 class="counter" data-target="8">0+</h2>
+                <p>Years Experience</p>
+            </div>
+            <div class="counter-box">
+                <h2 class="counter" data-target="1500">0+</h2>
+                <p>Projects</p>
+            </div>
+            <div class="counter-box">
+                <h2 class="counter" data-target="28">0+</h2>
+                <p>Our Team</p>
+            </div>
         </div>
     </div>
-</div>
     <script>
-     let updateCounter = (counter) => {
+        let updateCounter = (counter) => {
             const target = +counter.getAttribute('data-target'); // Get the target number from data-target
             const count = +counter.innerText.replace('+', '');   // Get the current number
             const speed = 110;                                   // Adjust the speed of the counting
             const increment = target / speed;                    // Calculate increment
-            
+
             if (count < target) {
                 counter.innerText = `${Math.ceil(count + increment)}+`; // Update counter value
                 setTimeout(() => updateCounter(counter), 20);           // Repeat every 20ms
@@ -290,9 +363,9 @@
             observer.observe(counter); // Start observing each counter element
         });
     </script>
-    
-    
-     <!-- counters box -->
+
+
+    <!-- counters box -->
     <!-- services start -->
     <div class="services" id="services">
         <h3 class="section-title">Our Services</h3>
@@ -411,8 +484,9 @@
         </div>
     </div>
     <!-- services end -->
+
     <!-- faqs -->
-    <h1>FAQ</h1>
+    <h3 class="section-title">FAQ</h3>
     <div class="accordion">
         <div class="accordion-item">
             <div class="accordion-item-header">
@@ -486,69 +560,6 @@
             </div>
         </div>
     </div>
-    <style>
-        h1 {
-            text-align: center;
-            margin: 2rem 0;
-            font-size: 2.5rem;
-        }
-
-        .accordion {
-            width: 90%;
-            max-width: 1000px;
-            margin: 2rem auto;
-        }
-
-        .accordion-item {
-            background-color: #fff;
-            /* color: #111; */
-            margin: 1rem 0;
-            border-radius: 0.5rem;
-            /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);*/
-        }
-
-        .accordion-item-header {
-            padding: 0.5rem 3rem 0.5rem 1rem;
-            min-height: 3.5rem;
-            line-height: 1.25rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            position: relative;
-            cursor: pointer;
-            background-color: white;
-        }
-
-        .accordion-item-header::after {
-            content: "\002B";
-            font-size: 2rem;
-            position: absolute;
-            right: 1rem;
-        }
-
-        .accordion-item-header.active::after {
-            content: "\2212";
-        }
-
-        .accordion-item-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
-
-        .accordion-item-body-content {
-            padding: 1rem;
-            line-height: 1.5rem;
-            border-top: 1px solid;
-            border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
-        }
-
-        @media(max-width:767px) {
-            html {
-                font-size: 14px;
-            }
-        }
-    </style>
     <script>
         const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
@@ -688,7 +699,8 @@
             </div>
         </div>
         <div class="bottom-container">© 2024 RJR Safety Nets All Rights Reserved | Website Designed by
-            <!-- <a class="underline" href="https://www.instagram.com/king_misba/"> @Ahmed Misbahuddin</a></div> -->
+            <!-- <a class="underline" href="https://www.instagram.com/king_misba/"> @Ahmed Misbahuddin</a> -->
+        </div>
     </footer>
     <div id="call">
         <a href="tel:+917075051812"><img width="60px" height="60px" src="images/call-btn-rem.png" alt=""></a>
