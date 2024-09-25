@@ -160,7 +160,60 @@ li a {
     color: #fff;
 }
 /* Mobile View */
+/* about wellcome  on home page */
+.about {
+    display: flex;
+    align-items: center;          /* Align vertically */
+    justify-content: space-between; /* Add space between the text and image */
+    padding: 20px;
+}
+
+.about-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-right {
+    flex: 1;
+    text-align: center;           /* Center the image */
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;           /* Optional: add a subtle rounded edge to the image */
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;                  /* Choose an appropriate color for the title */
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555; 
+    margin-left: 87px;                 /* Subtle text color */
+}
+/* about wellcome  on home page */
 @media screen and (max-width: 768px) {
+    /* about wellcome  on home page */
+    .about {
+        flex-direction: column;    /* Stack the content on smaller screens */
+        text-align: center;
+    }
+    .about-text {
+        margin-left: 0;             /* Remove the left margin on mobile */
+    }
+    .about-left {
+        padding-right: 0;
+    }
+
+    .about-right {
+        margin-top: 20px;          /* Add some space above the image on mobile */
+    }
+    /* about wellcome  on home page */
     .mobile-view-cont{
         display: block;
         border-top: #333;
@@ -171,8 +224,8 @@ li a {
     .hamburger {
         display: flex;
         position: absolute;
-        right: 24px;
-        top: 22px;
+        right: 30px;
+        top: 40px;
         z-index: 999;
     }
 

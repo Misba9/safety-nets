@@ -12,8 +12,23 @@
     <script src="https://kit.fontawesome.com/11ebebdeee.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<script>
+    // for loading animation
+    window.addEventListener('load', () => {
+        // Simulate a loader delay of 3 seconds (you can adjust this time)
+        setTimeout(() => {
+            // Hide the loader
+            document.querySelector('.loader').style.display = 'none';
+
+            // Show the content
+            document.getElementById('content').style.display = 'block';
+        }, 2500);  // 3 seconds delay
+    });
+
+</script>
 
 <body>
+    <div class="loader"></div>
     <!-- navbar start -->
     <nav class="navbar">
         <div class="left-nav " width="90px" height="70px">
@@ -67,7 +82,7 @@
                         </h3>
                         <li class="text-line">
                             <a href=""><i class="fa-solid fa-location-dot"></i>
-                            Bengaluru</a>
+                                Bengaluru</a>
                         </li>
                         <h3 class="mobile-view-title">Social Links
                         </h3>
@@ -103,191 +118,206 @@
         <script>
             let hamburger = document.getElementById('hamburger');
             const navLinks = document.getElementById('nav-links-id');
-    
+
             hamburger.addEventListener('click', () => {
                 // Toggle classes for animation
                 navLinks.classList.toggle('open');
                 hamburger.classList.toggle('active');
             });
-    
+
         </script>
     </nav>
     <!-- navbar end -->
     <div class="top-space"></div>
-    <!-- poster -->
-    <section class="hero-section">
-        <div class="slider-container">
-            <div class="mySlides fade">
-                <img width="1200px" height="600px" src="../../images/about us.jpg" alt="Image 1" class="slide-image">
+    <div id="content" style="display: none;">
+        <!-- poster -->
+        <section class="hero-section">
+            <div class="slider-container">
+                <div class="mySlides fade">
+                    <img width="1200px" height="600px" src="../../images/about us.jpg" alt="Image 1"
+                        class="slide-image">
 
-                <div class="text-container">
-                    <p class="text">About Us <br>
-                        <span class="sub-text ">We Are The Best Choice For Your Safety Nets</span>
-                    </p>
+                    <div class="text-container">
+                        <p class="text">About Us <br>
+                            <span class="sub-text ">We Are The Best Choice For Your Safety Nets</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- poster end-->
-    <!-- containt start -->
-    <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-        <div class="absolute inset-0 -z-10 overflow-hidden">
-            <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
-                aria-hidden="true">
-                <defs>
-                    <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1"
-                        patternUnits="userSpaceOnUse">
-                        <path d="M100 200V.5M.5 .5H200" fill="none" />
-                    </pattern>
-                </defs>
-                <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
-                    <path
-                        d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-                        stroke-width="0" />
+        </section>
+        <!-- poster end-->
+        <!-- containt start -->
+        <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+            <div class="absolute inset-0 -z-10 overflow-hidden">
+                <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                    aria-hidden="true">
+                    <defs>
+                        <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1"
+                            patternUnits="userSpaceOnUse">
+                            <path d="M100 200V.5M.5 .5H200" fill="none" />
+                        </pattern>
+                    </defs>
+                    <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+                        <path
+                            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                            stroke-width="0" />
+                    </svg>
+                    <rect width="100%" height="100%" stroke-width="0"
+                        fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
                 </svg>
-                <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
-            </svg>
-        </div>
-        <div
-            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+            </div>
             <div
-                class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-                <div class="lg:pr-4">
-                    <div class="lg:max-w-lg">
-                        <p class="text-base font-semibold leading-7 text-indigo-600">RjR</p>
-                        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Us
-                        </h1>
-                        <p class="mt-6 text-xl leading-8 text-gray-700">RJR Safety Nets having 8+ Years of Experience in
-                            Netting. We understood the quality lacking in current netting industry. Local Players gives
-                            wrong commitments, false details about the net for their short term profit. To Build Quality
-                            assurance in the industry We started this company..</p>
+                class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+                <div
+                    class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                    <div class="lg:pr-4">
+                        <div class="lg:max-w-lg">
+                            <p class="text-base font-semibold leading-7 text-indigo-600">RjR</p>
+                            <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Us
+                            </h1>
+                            <p class="mt-6 text-xl leading-8 text-gray-700">RJR Safety Nets having 8+ Years of
+                                Experience in
+                                Netting. We understood the quality lacking in current netting industry. Local Players
+                                gives
+                                wrong commitments, false details about the net for their short term profit. To Build
+                                Quality
+                                assurance in the industry We started this company..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+                    <img class="w-64 max-w-none rounded-xl  shadow-xl ring-1 ring-gray-400/10 sm:w-80 pr-4"
+                        src="../../images/rjr-safety-nets-home-a.png" alt="">
+                </div>
+
+                <div
+                    class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                    <div class="lg:pr-4">
+                        <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+                            <p>RJR is a nets service organization for different sectors like industrial, commercial and
+                                domestic aspects. These nets are designed to safeguard people arrest falling or flying
+                                by
+                                limiting the distance they fill this products are especially wicker by our skilled
+                                technicians, who bench to guarantee quality product reach clients we have 100% happy
+                                customers for best service in Bangalore and bea a favourable for all sectors of safety
+                                nets
+                                of our clients.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-                <img class="w-64 max-w-none rounded-xl  shadow-xl ring-1 ring-gray-400/10 sm:w-80 pr-4"
-                    src="../../images/rjr-safety-nets-home-a.png" alt="">
-            </div>
-
-            <div
-                class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-                <div class="lg:pr-4">
-                    <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-                        <p>RJR is a nets service organization for different sectors like industrial, commercial and
-                            domestic aspects. These nets are designed to safeguard people arrest falling or flying by
-                            limiting the distance they fill this products are especially wicker by our skilled
-                            technicians, who bench to guarantee quality product reach clients we have 100% happy
-                            customers for best service in Bangalore and bea a favourable for all sectors of safety nets
-                            of our clients.</p>
-                    </div>
+            <!-- main box start -->
+        </div>
+        <div class="main-boxes">
+            <h3 class="section-title">why to choose us?</h3>
+            <div class="parent-boxes">
+                <div class="box-1">
+                    <img class="box-1-img" height="80px" width="60px" src="../../images/quality-rem.png" alt="">
+                    <h3 class="box-1-title">Quality</h3>
+                    <p class="box-1-text">We use high quality nylon nets for strong and long lasting safety nets.</p>
                 </div>
+                <div class="box-1">
+                    <img class="box-1-img" height="80px" width="60px" src="../../images/safty-rem.png" alt="">
+                    <h3 class="box-1-title">Safety</h3>
+                    <p class="box-1-text">Safeguarding Your World with Unmatched Excellence.</p>
+                </div>
+                <div class="box-1">
+                    <img class="box-1-img" height="80px" width="60px" src="../../images/time-rem.png" alt="">
+                    <h3 class="box-1-title">Timely Work</h3>
+                    <p class="box-1-text">Excellence Delivered Right on Time.</p>
+                </div>
+
             </div>
         </div>
-        <!-- main box start -->
-    </div>
-    <div class="main-boxes">
-        <h3 class="section-title">why to choose us?</h3>
-        <div class="parent-boxes">
-            <div class="box-1">
-                <img class="box-1-img" height="80px" width="60px" src="../../images/quality-rem.png" alt="">
-                <h3 class="box-1-title">Quality</h3>
-                <p class="box-1-text">We use high quality nylon nets for strong and long lasting safety nets.</p>
-            </div>
-            <div class="box-1">
-                <img class="box-1-img" height="80px" width="60px" src="../../images/safty-rem.png" alt="">
-                <h3 class="box-1-title">Safety</h3>
-                <p class="box-1-text">Safeguarding Your World with Unmatched Excellence.</p>
-            </div>
-            <div class="box-1">
-                <img class="box-1-img" height="80px" width="60px" src="../../images/time-rem.png" alt="">
-                <h3 class="box-1-title">Timely Work</h3>
-                <p class="box-1-text">Excellence Delivered Right on Time.</p>
-            </div>
+        <!-- main boxs end-->
+        <!-- containt end -->
 
-        </div>
-    </div>
-    <!-- main boxs end-->
-    <!-- containt end -->
-
-    <!-- footer start -->
-    <footer>
-        <div class="top-container">
-            <div class="footer-container-1">
-                <!-- style="
+        <!-- footer start -->
+        <footer>
+            <div class="top-container">
+                <div class="footer-container-1">
+                    <!-- style="
                 max-width: 100%;
                 height: auto;
                 display: block;
                 vertical-align: middle;
                  "  -->
-                <img height="150px" src="../../images/rjr-safety-nets-footer.png" alt="RJR
+                    <img height="150px" src="../../images/rjr-safety-nets-footer.png" alt="RJR
                  safety nets">
-                <!-- <p class="text-line">RJR Safety Nets having 8+ Years of Experience in Netting. We understood the quality lacking in current netting industry. Local Players gives wrong commitments, false details about the net for their short term profit. To Build Quality assurance in the industry We started this  company..</p> -->
-                <ul class="social-media-grp">
-                    <li class="icon"><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li class="icon"><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li class="icon"><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
-                    <li class="icon"><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-            <div class="footer-container-2">
-                <h3 class="footer-title">Address</h3>
-                <li class="text-line"><i class="text-line-a" class="fa-solid fa-location-dot"></i> Address: Muneshwara
-                    Swamy Layout,
-                    Ejipura, Bengaluru, Karnataka 560095</li>
-                <ul>
-                    <li class="text-line">
-                        <a class="text-line-a" href="tel:+917075051812"><i class="fa-solid fa-phone"></i> +91 70 7505
-                            1812 </a>
-                    </li>
-                    <li class="text-line">
-                        <a class="text-line-a" href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><i
-                                class="fa-brands fa-whatsapp"></i> +91 80 7451 4411</a>
-                    </li>
-                    <li class="text-line">
-                        <a class="text-line-a" href="mailto:ahmedmisba405@gmail.com"><i
-                                class="fa-solid fa-envelope"></i>
-                            rjrsafetynets@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-container-3">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul>
-                    <li class="text-line"><a class="text-line-a" href="index.html">Home</a></li>
-                    <li class="text-line"><a class="text-line-a" href="details/about/">About</a></li>
-                    <li class="text-line"><a class="text-line-a" href="#services">Services</a></li>
-                    <li class="text-line"><a class="text-line-a" href="details/contactus/">Contact</a></li>
+                    <!-- <p class="text-line">RJR Safety Nets having 8+ Years of Experience in Netting. We understood the quality lacking in current netting industry. Local Players gives wrong commitments, false details about the net for their short term profit. To Build Quality assurance in the industry We started this  company..</p> -->
+                    <ul class="social-media-grp">
+                        <li class="icon"><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li class="icon"><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li class="icon"><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li class="icon"><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-container-2">
+                    <h3 class="footer-title">Address</h3>
+                    <li class="text-line"><i class="text-line-a" class="fa-solid fa-location-dot"></i> Address:
+                        Muneshwara
+                        Swamy Layout,
+                        Ejipura, Bengaluru, Karnataka 560095</li>
+                    <ul>
+                        <li class="text-line">
+                            <a class="text-line-a" href="tel:+917075051812"><i class="fa-solid fa-phone"></i> +91 70
+                                7505
+                                1812 </a>
+                        </li>
+                        <li class="text-line">
+                            <a class="text-line-a" href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><i
+                                    class="fa-brands fa-whatsapp"></i> +91 80 7451 4411</a>
+                        </li>
+                        <li class="text-line">
+                            <a class="text-line-a" href="mailto:ahmedmisba405@gmail.com"><i
+                                    class="fa-solid fa-envelope"></i>
+                                rjrsafetynets@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-container-3">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li class="text-line"><a class="text-line-a" href="index.html">Home</a></li>
+                        <li class="text-line"><a class="text-line-a" href="details/about/">About</a></li>
+                        <li class="text-line"><a class="text-line-a" href="#services">Services</a></li>
+                        <li class="text-line"><a class="text-line-a" href="details/contactus/">Contact</a></li>
 
-                </ul>
+                    </ul>
+                </div>
+                <div class="footer-container-4">
+                    <h3 class="footer-title">Services</h3>
+                    <ul>
+                        <li class="text-line"><a class="text-line-a" href="pages/Balcony-Safety-Nets/">Balcony Safety
+                                Nets</a></li>
+                        <li class="text-line"><a class="text-line-a" href="pages/Children's-Safety-Nets/">Children's
+                                Safety
+                                Nets</a></li>
+                        <li class="text-line"><a class="text-line-a" href="pages/Cricket-Practice-Nets/">Cricket
+                                Practice
+                                Nets</a></li>
+                        <li class="text-line"><a class="text-line-a" href="pages/Monkey-Safety-Nets/">Monkey Safety
+                                Nets</a>
+                        </li>
+                        <li class="text-line"><a class="text-line-a" href="pages/Pigeon-Safety-Nets/">Pigeon Safety
+                                Nets</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-container-4">
-                <h3 class="footer-title">Services</h3>
-                <ul>
-                    <li class="text-line"><a class="text-line-a" href="pages/Balcony-Safety-Nets/">Balcony Safety
-                            Nets</a></li>
-                    <li class="text-line"><a class="text-line-a" href="pages/Children's-Safety-Nets/">Children's Safety
-                            Nets</a></li>
-                    <li class="text-line"><a class="text-line-a" href="pages/Cricket-Practice-Nets/">Cricket Practice
-                            Nets</a></li>
-                    <li class="text-line"><a class="text-line-a" href="pages/Monkey-Safety-Nets/">Monkey Safety Nets</a>
-                    </li>
-                    <li class="text-line"><a class="text-line-a" href="pages/Pigeon-Safety-Nets/">Pigeon Safety Nets</a>
-                    </li>
-                </ul>
+            <div class="bottom-container">© 2024 RJR Safety Nets All Rights Reserved | Website Designed by
+                <!-- <a class="underline" href="https://www.instagram.com/king_misba/"> @Ahmed Misbahuddin</a> -->
             </div>
+        </footer>
+        <div id="call">
+            <a href="tel:+917075051812"><img width="60px" height="60px" src="../../images/call-btn-rem.png" alt=""></a>
         </div>
-        <div class="bottom-container">© 2024 RJR Safety Nets All Rights Reserved | Website Designed by
-            <!-- <a class="underline" href="https://www.instagram.com/king_misba/"> @Ahmed Misbahuddin</a> -->
+        <div id="whatsapp">
+            <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><img width="60px" height="60px"
+                    src="../../images/whatsapp-btn-rem.png" alt=""></a>
         </div>
-    </footer>
-    <div id="call">
-        <a href="tel:+917075051812"><img width="60px" height="60px" src="../../images/call-btn-rem.png" alt=""></a>
+        <!-- footer end -->
     </div>
-    <div id="whatsapp">
-        <a href="https://wa.me/918074514411?text=Hi%20There!" target="_blank"><img width="60px" height="60px"
-                src="../../images/whatsapp-btn-rem.png" alt=""></a>
-    </div>
-    <!-- footer end -->
 </body>
 
 </html>
