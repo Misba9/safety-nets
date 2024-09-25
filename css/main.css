@@ -703,8 +703,8 @@ html {
     }
 
     .text-container {
-        width: 90%;
-        padding: 8px 15px;
+        width: 100%;
+        padding: 1px 1px;
     }
 
     .slide-image {
