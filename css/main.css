@@ -326,18 +326,33 @@ html {
     line-height: 1.6;
 }
 
-.learn-more {
-    /* text-decoration: none; */
-    color: #4235f1;
-    display: flex;
-    font-size: 14px;
-    font-weight: 500;
-    position: absolute;
-    bottom: 0;
-    padding-top: 6px;
-    padding-bottom: 8px;
+.hover-button-service {
+    margin-top: 20px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.hover-button-service-space {
+    margin-right: 24px;
+}
+
+.hover-button-service:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.119);
+    transform: translateY(-2px);
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
 /* services boxes end */
 /* contact start */
 .contact-c {
