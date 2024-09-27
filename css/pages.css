@@ -243,7 +243,7 @@ html {
     color: white;
     padding: 20px 70px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     /* flex-wrap: wrap; */
     /* flex-direction: row; */
     justify-content: space-between;
@@ -274,8 +274,8 @@ html {
 }
 
 .footer-container-1,
-.footer-container-2,
-.footer-container-3,
+/* .footer-container-2,
+.footer-container-3, */
 .footer-container-4 {
     width: 100%;
     color: rgb(0, 0, 0);
@@ -287,7 +287,7 @@ html {
     gap: 15px;
 }
 
-.footer-container-1 {
+.footer-container-1-center {
     text-align: center;
 }
 
@@ -584,7 +584,7 @@ html {
 
 @media screen and (max-width: 1074px) {
     .top-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr ;
     }
 
     .parent-boxes {
