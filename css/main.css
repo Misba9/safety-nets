@@ -508,6 +508,8 @@ a{
 .footer-title {
     margin-bottom: 12px;
     font-weight: 700;
+    border-bottom: #000000 2px solid;
+    width: 86px;
 }
 
 .text-line {
