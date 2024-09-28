@@ -42,7 +42,23 @@ html {
     color: white;
     background-color: #007bff;
     /* Default button color */
+    /* border:  #007bff 6px solid; */
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.hover-button-r {
+    margin-top: 23px;
+    padding: 10px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    /* background-color: #007bff; */
+    /* Default button color */
+    border:  #007bff 6px solid;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -56,11 +72,14 @@ html {
 
 .hover-button:hover {
     background-color: #0056b3;
-    /* Darker blue on hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.119);
-    /* Increase shadow on hover */
     transform: translateY(-2px);
-    /* Slightly lift the button on hover */
+}
+.hover-button-r:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.119);
+    transform: translateY(-2px);
 }
 
 .slide-image {
@@ -339,6 +358,20 @@ html {
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.hover-button-service-r {
+    margin-top: 20px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #007bff;
+    background-color: white;
+    border: #007bff 2px solid;
+    /* border: none; */
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 .hover-button-service-space {
     margin-right: 24px;
@@ -346,6 +379,12 @@ html {
 
 .hover-button-service:hover {
     background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.119);
+    transform: translateY(-2px);
+}
+.hover-button-service-r:hover {
+    background-color: #007bff;
+    color: white;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.119);
     transform: translateY(-2px);
 }
@@ -730,7 +769,7 @@ a{
         object-fit: cover;
     }
 
-    .hover-button {
+    .hover-button, .hover-button-r {
         margin-top: 20px;
         padding: 8px 12px;
         font-size: 12px;
