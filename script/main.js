@@ -115,15 +115,15 @@ window.onload = function () {
 
 // btn slider image 
 
-const button = document.getElementById('myButton');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const button = document.getElementById('myButton');
+//     button.addEventListener('mouseover', () => {
+//         button.textContent = 'Hovered!';
+//     });
+//     button.addEventListener('mouseout', () => {
+//         button.textContent = 'Hover Me';
+//     });
+// });
 
-// Add hover event listener for dynamic text change
-button.addEventListener('mouseover', () => {
-    button.textContent = 'Hovered!';
-});
-
-button.addEventListener('mouseout', () => {
-    button.textContent = 'Hover Me';
-});
 // 
 // 

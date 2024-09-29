@@ -44,7 +44,7 @@ html {
     /* Default button color */
     /* border:  #007bff 6px solid; */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     /* Smooth transition */
@@ -52,14 +52,14 @@ html {
 }
 .hover-button-r {
     margin-top: 23px;
-    padding: 10px 18px;
+    padding: 12px 18px;
     font-size: 18px;
     font-weight: bold;
     color: #007bff;
     /* background-color: #007bff; */
     /* Default button color */
-    border:  #007bff 6px solid;
-    border-radius: 5px;
+    border:  #007bff 4px solid;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     /* Smooth transition */
@@ -769,13 +769,18 @@ a{
         object-fit: cover;
     }
 
-    .hover-button, .hover-button-r {
+    .hover-button {
         margin-top: 20px;
         padding: 8px 12px;
         font-size: 12px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-
+    .hover-button-r {
+        margin-top: 20px;
+        padding: 4px 12px;
+        font-size: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
     /* slider end */
     /* sercives start */
 
