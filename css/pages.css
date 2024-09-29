@@ -251,7 +251,14 @@ html {
 }
 
 .footer-title {
+    font-weight: 700;
+}
+.footer-title-underline{
+    margin-bottom: 14px;
+    font-weight: 700;
     margin-bottom: 12px;
+    border-top: #4235f1 3.4px solid;
+    width: 46px;
     font-weight: 700;
 }
 
@@ -607,6 +614,7 @@ html {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        padding: 0;
     }
 
     .parent-boxes {
