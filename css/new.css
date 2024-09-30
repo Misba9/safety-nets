@@ -25,7 +25,18 @@ body {
 .left-nav {
     margin-left: 12px;
 }
-
+.nav-logo {
+    background-repeat: no-repeat;
+    background-image: url(../images/logo/logo-navbar.png);
+    width: 100px;
+    height: 100px;
+    background-size: 90px 90px;
+    background-position: center;
+    float: left;
+    margin: 0 auto;
+    text-indent: -9999px;
+    overflow: hidden;
+}
 .navbar ul {
     display: flex;
 }
