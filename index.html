@@ -128,7 +128,7 @@
 
             // Show the content
             document.getElementById('content').style.display = 'block';
-        }, 3000);
+        }, 1000);
     });
 
 </script>
@@ -1074,7 +1074,8 @@
                     </a>
                 </div>
             </div>
-            <div class="form-c anime">
+            <form class="form-c anime"  action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="211392ce-3252-4f83-b49f-bacd0d71f4d4">
                 <!-- <h3>Get in Touch</h3> -->
                 <input class="form-input-2" type="text" name="name" id="name" placeholder="Name">
                 <input class="form-input-2" type="phone" name="phone" id="phone" placeholder="Phone Number">
@@ -1082,7 +1083,7 @@
                 <textarea class="form-input" name="text" id="text" cols="1" rows="3"
                     placeholder="Ellaborate your concern"></textarea>
                 <button class="btn btn-dark">Submit</button>
-            </div>
+        </form>
         </div><br>
     </section>
     <!-- contact form end-->
