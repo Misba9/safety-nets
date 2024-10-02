@@ -346,7 +346,7 @@ h1 {
 
 .accordion-item-header::after {
     content: "\002B";
-    font-size: 2rem;
+    font-size: 1.2rem;
     position: absolute;
     right: 1rem;
 }
